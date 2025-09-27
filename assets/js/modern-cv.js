@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // DARK MODE FUNCTIONALITY
     // =========================================================================
 
-    const initDarkMode = () => {
+        const initDarkMode = () => {
         const themeToggle = document.getElementById('themeToggle');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -361,7 +361,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Apply initial theme
         document.documentElement.setAttribute('data-theme', savedTheme);
 
-        // Theme toggle functionality
+        // Theme toggle functionality (guard if toggle exists)
+        if (!themeToggle) return;
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
