@@ -17,8 +17,8 @@ title: Bootstrap 4 Github Pages
 email: ""
 description: >- # this means to ignore newlines until "baseurl:"
   A Bootstrap 4 start up project for Jekyll and Github Pages
-baseurl: "" # for user/org pages keep empty; Actions sets baseurl for project pages
-url: "" # set to your canonical domain when known, e.g. https://<user>.github.io
+baseurl: "/cv2" # project pages under /cv2; set to "" for user/org root
+url: "https://marvinmvns.github.io" # canonical domain for GitHub Pages
 #twitter_username: jekyllrb
 #github_username:  jekyll
 
