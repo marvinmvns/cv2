@@ -1,0 +1,5 @@
+# Local-only overrides for development
+# Serve the site at / (no subpath) so assets resolve without 404s
+baseurl: ""
+url: "http://localhost:4000"
+
