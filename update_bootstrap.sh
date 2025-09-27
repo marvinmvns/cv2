@@ -3,7 +3,7 @@
 # A useful script to download the latest version of bootstrap and jquery
 
 rm -rf node_modules package.json package-lock.json
-npm install bootstrap@^4.6.2 jquery@^3.7.1
+npm install bootstrap@^5.3.8 jquery@^3.7.1
 
 rm -rf _sass/bootstrap
 mkdir -p _sass/bootstrap
