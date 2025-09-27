@@ -462,6 +462,12 @@
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
+// Bootstrap 4 -> 5 compatibility helpers
+.badge-primary {
+  background-color: var(--bs-primary) !important;
+  color: #fff !important;
+}
+
 // Modern summary highlights
 .summary-highlights {
   .highlight-item {
