@@ -17,12 +17,12 @@ title: Bootstrap 4 Github Pages
 email: ""
 description: >- # this means to ignore newlines until "baseurl:"
   A Bootstrap 4 start up project for Jekyll and Github Pages
-#baseurl: "" # the subpath of your site, e.g. /blog
-#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # for user/org pages keep empty; Actions sets baseurl for project pages
+url: "" # set to your canonical domain when known, e.g. https://<user>.github.io
 #twitter_username: jekyllrb
 #github_username:  jekyll
 
-repository: "nicolas-van/bootstrap-4-github-pages"
+repository: "marvinmvns/cv2"
 
 # Build settings
 plugins:
@@ -40,3 +40,4 @@ exclude:
   - Gemfile.lock
   - node_modules
   - update_boostrap.sh
+  - update_bootstrap.sh

@@ -17,3 +17,13 @@ A [Bootstrap 4](https://getbootstrap.com/) template project for [Github Pages](h
 ## License
 
 [See the license file.](./LICENSE.md)
+
+## Deployment (GitHub Pages + Jekyll)
+
+- Prerequisites: Enable GitHub Pages in Settings → Pages with "GitHub Actions" as the source.
+- Build and deploy: Push to `main`. The workflow in `.github/workflows/pages.yml` builds with Jekyll and publishes `_site/`.
+- Local preview: `bundle install` then `bundle exec jekyll serve --livereload` and open `http://localhost:4000`.
+- URLs:
+  - User/Org pages: keep `baseurl: ""` and set `url: "https://<user>.github.io"` in `_config.yml` when known.
+  - Project pages: `baseurl` is injected by the workflow; you can also set `baseurl: "/<repo>"` and `url: "https://<user>.github.io"`.
+- Assets: Run `./update_bootstrap.sh` to refresh Bootstrap/jQuery assets (requires Node/npm).
