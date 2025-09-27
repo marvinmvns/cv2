@@ -1,34 +1,98 @@
-// Modern Resume Template - Bootstrap Customizations
-// Based on 2025 design trends for professional CVs
+// Ultra-Modern Interactive CV Template 2025
+// Advanced animations, glassmorphism, and micro-interactions
 
-// Import modern fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+// Import cutting-edge fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+// CSS Custom Properties for dynamic theming
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  --accent-gradient: linear-gradient(135deg, #06ffa5 0%, #00d4ff 100%);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --blur-amount: 20px;
+  --animation-speed: 0.8s;
+  --hover-scale: 1.05;
+  --shadow-color: rgba(37, 99, 235, 0.3);
+}
 
 // Modern CV-specific styles
 // =========================================================================
 
-// Modern container and layout
+// Ultra-modern animated container
 .resume-wrapper {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--primary-gradient);
   min-height: 100vh;
   padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+
+  // Animated background particles
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+      radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+    background-size: 100px 100px, 150px 150px, 120px 120px;
+    animation: floating-particles 20s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  // Floating geometric shapes
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+    border-radius: 50%;
+    animation: floating-shape 15s ease-in-out infinite;
+    pointer-events: none;
+  }
 }
 
 .resume-wrapper-inner {
-  max-width: 900px;
-  border-radius: 12px;
+  max-width: 950px;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(var(--blur-amount));
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 32px 64px rgba(0, 0, 0, 0.15),
+    0 16px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(0);
+  transition: all var(--animation-speed) cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow:
+      0 40px 80px rgba(0, 0, 0, 0.2),
+      0 20px 40px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
 }
 
-// Modern header with gradient
+// Ultra-modern glassmorphic header
 .resume-header {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(29, 78, 216, 0.95) 100%);
+  backdrop-filter: blur(30px);
   color: white;
-  padding: 3rem 2rem;
+  padding: 3.5rem 2.5rem;
   position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
+  // Animated mesh gradient overlay
   &::before {
     content: '';
     position: absolute;
@@ -36,40 +100,137 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+    background:
+      radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+      linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.02) 50%, transparent 70%);
+    animation: mesh-gradient 10s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+
+  // Floating accent shapes
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    width: 100px;
+    height: 100px;
+    background: var(--accent-gradient);
+    border-radius: 50%;
     opacity: 0.1;
+    animation: pulse-accent 4s ease-in-out infinite;
+    pointer-events: none;
   }
 }
 
-// Modern profile picture
+// Ultra-modern interactive profile picture
 .picture {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  border: 4px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  position: relative;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 0 0 4px rgba(255, 255, 255, 0.1),
+    0 16px 48px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2);
+  transition: all var(--animation-speed) cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  overflow: hidden;
+
+  // Animated ring effect
+  &::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, var(--accent-gradient), transparent, var(--accent-gradient));
+    animation: rotate-ring 3s linear infinite;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  // Glowing effect
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(6, 255, 165, 0.3) 0%, transparent 70%);
+    z-index: -2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.1) rotate(5deg);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow:
+      0 0 0 8px rgba(255, 255, 255, 0.2),
+      0 24px 64px rgba(0, 0, 0, 0.3),
+      inset 0 4px 8px rgba(255, 255, 255, 0.3);
+
+    &::before,
+    &::after {
+      opacity: 1;
+    }
   }
 }
 
-// Modern name styling
+// Ultra-modern animated name styling
 .name {
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   margin-bottom: 0.5rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #ffffff, #f0f9ff, #e0f2fe);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-text 3s ease-in-out infinite;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+
+  // Animated underline
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+    animation: name-underline 2s ease-out 0.5s forwards;
+  }
 }
 
-// Modern title/role styling
+// Modern animated title/role styling
 .title {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+
+  // Typing effect cursor
+  &::after {
+    content: '|';
+    color: var(--accent-gradient);
+    animation: blink-cursor 1.5s infinite;
+    margin-left: 4px;
+  }
 }
 
 // Modern contact info
@@ -103,10 +264,41 @@
   }
 }
 
-// Modern content sections
+// Ultra-modern grid-based content sections
 .resume-body {
-  background: white;
-  padding: 3rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  padding: 4rem 3rem;
+  position: relative;
+
+  // Subtle animated background pattern
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.02) 1px, transparent 1px),
+      radial-gradient(circle at 80% 80%, rgba(37, 99, 235, 0.02) 1px, transparent 1px),
+      radial-gradient(circle at 40% 40%, rgba(37, 99, 235, 0.01) 1px, transparent 1px);
+    background-size: 50px 50px, 80px 80px, 60px 60px;
+    animation: floating-dots 25s linear infinite;
+    pointer-events: none;
+  }
+
+  // Modern grid layout
+  .row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
 }
 
 .resume-section-title {
@@ -674,5 +866,812 @@ legend {
 .list-group-item {
   h1, h2, h3, h4, h5, h6 {
     color: inherit;
+  }
+}
+
+// =========================================================================
+// ADVANCED ANIMATIONS & KEYFRAMES
+// =========================================================================
+
+// Floating particles animation
+@keyframes floating-particles {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-20px) rotate(90deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-40px) rotate(180deg);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-20px) rotate(270deg);
+    opacity: 0.6;
+  }
+}
+
+// Floating shape animation
+@keyframes floating-shape {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  25% {
+    transform: translateY(-30px) translateX(20px) scale(1.1);
+  }
+  50% {
+    transform: translateY(-60px) translateX(0) scale(0.9);
+  }
+  75% {
+    transform: translateY(-30px) translateX(-20px) scale(1.05);
+  }
+}
+
+// Mesh gradient animation
+@keyframes mesh-gradient {
+  0% {
+    opacity: 0.3;
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(20px) translateY(-10px);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateX(-10px) translateY(15px);
+  }
+}
+
+// Pulse accent animation
+@keyframes pulse-accent {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.2;
+  }
+}
+
+// Rotating ring animation
+@keyframes rotate-ring {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Gradient text animation
+@keyframes gradient-text {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+// Name underline animation
+@keyframes name-underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+// Blinking cursor animation
+@keyframes blink-cursor {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+// Progress bar fill animation
+@keyframes progress-fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+// Skill chart pulse
+@keyframes skill-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--shadow-color);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+  }
+}
+
+// Bounce in animation
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(50px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-10px);
+  }
+  70% {
+    transform: scale(0.95) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+// Slide in from left
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Slide in from right
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Fade in up
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// =========================================================================
+// MODERN INTERACTIVE ELEMENTS
+// =========================================================================
+
+// Stagger animation for timeline items
+.resume-timeline-item {
+  animation: fade-in-up 0.8s ease-out forwards;
+  opacity: 0;
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+// Enhanced skill progress bars with animation
+.progress-bar {
+  animation: progress-fill 2s ease-out 1s forwards;
+  width: 0;
+}
+
+// Hover animation for badges
+.badge {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    animation: skill-pulse 0.6s ease-out;
+  }
+}
+
+// Interactive summary highlights
+.summary-highlights .highlight-item {
+  animation: slide-in-left 0.6s ease-out forwards;
+  opacity: 0;
+
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.2}s;
+    }
+  }
+}
+
+// Skills section animation
+.resume-skill-item {
+  animation: slide-in-right 0.8s ease-out forwards;
+  opacity: 0;
+
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.15}s;
+    }
+  }
+}
+
+// Floating dots animation
+@keyframes floating-dots {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(30px) translateY(-30px);
+  }
+  66% {
+    transform: translateX(-20px) translateY(20px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+// =========================================================================
+// ULTRA-MODERN INTERACTIVE CARDS
+// =========================================================================
+
+.resume-section {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+
+  // Animated border gradient
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(45deg, var(--accent-gradient), transparent, var(--accent-gradient));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+// Enhanced timeline with glassmorphism
+.resume-timeline-item {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+
+  // Hover glow effect
+  &::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(6, 255, 165, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+// Interactive skill bars with advanced styling
+.resume-skill-item {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateX(5px);
+  }
+}
+
+// Advanced progress bars
+.progress {
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: progress-shimmer 2s infinite;
+  }
+
+  .progress-bar {
+    background: var(--secondary-gradient);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      animation: bar-shine 3s infinite;
+    }
+  }
+}
+
+@keyframes progress-shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes bar-shine {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+// Enhanced badges with micro-interactions
+.badge {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+  }
+
+  &:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+// Smooth section transitions
+.col-lg-9,
+.col-lg-3 {
+  transition: all 0.3s ease;
+}
+
+// Enhanced education cards
+.resume-degree {
+  font-size: 1.1rem;
+  background: var(--secondary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Modern interests with hover effects
+.interests-section .badge {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  &:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+  }
+}
+
+// =========================================================================
+// DARK MODE IMPLEMENTATION
+// =========================================================================
+
+// Dark mode CSS variables
+:root[data-theme="dark"] {
+  --primary-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  --secondary-gradient: linear-gradient(135deg, #0f3460 0%, #16537e 100%);
+  --accent-gradient: linear-gradient(135deg, #06ffa5 0%, #00d4ff 100%);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #1a1a2e;
+  --bg-card: rgba(26, 26, 46, 0.8);
+}
+
+// Theme Toggle Button
+.theme-toggle-container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 10000;
+}
+
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 0;
+  width: 70px;
+  height: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(6, 255, 165, 0.3);
+  }
+}
+
+.theme-toggle-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+
+.theme-toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 29px;
+  height: 29px;
+  background: linear-gradient(135deg, #06ffa5, #00d4ff);
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  i {
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+
+  .sun-icon {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .moon-icon {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+// Dark mode active state
+[data-theme="dark"] {
+  .theme-toggle-thumb {
+    transform: translateX(35px);
+
+    .sun-icon {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    .moon-icon {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  // Dark mode styles for main elements
+  .resume-wrapper {
+    background: var(--primary-gradient);
+  }
+
+  .resume-wrapper-inner {
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+  }
+
+  .resume-header {
+    background: linear-gradient(135deg, rgba(15, 52, 96, 0.9) 0%, rgba(22, 83, 126, 0.95) 100%);
+  }
+
+  .resume-body {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+
+    &::before {
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(6, 255, 165, 0.05) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+        radial-gradient(circle at 40% 40%, rgba(6, 255, 165, 0.03) 1px, transparent 1px);
+    }
+  }
+
+  .resume-section {
+    background: var(--bg-card);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+  }
+
+  .resume-timeline-item {
+    background: rgba(26, 26, 46, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+  }
+
+  .resume-skill-item {
+    background: rgba(26, 26, 46, 0.7);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+  }
+
+  .resume-section-title {
+    color: #06ffa5;
+  }
+
+  .resume-position-title {
+    color: var(--text-primary);
+  }
+
+  .resume-company-name {
+    color: #00d4ff;
+  }
+
+  .resume-position-time {
+    color: var(--text-muted);
+  }
+
+  .resume-skill-name {
+    color: var(--text-secondary);
+  }
+
+  .resume-degree {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .resume-degree-org {
+    color: #00d4ff;
+  }
+
+  .resume-degree-time {
+    color: var(--text-muted);
+  }
+
+  .badge-light {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .highlight-item {
+    background: rgba(26, 26, 46, 0.6);
+    border-left-color: #06ffa5;
+
+    span {
+      color: var(--text-secondary);
+    }
+
+    &:hover {
+      background: rgba(26, 26, 46, 0.8);
+    }
+  }
+
+  .footer-modern {
+    background: var(--bg-secondary) !important;
+    border-top-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+
+    .text-muted {
+      color: var(--text-muted) !important;
+    }
+
+    .social-links a {
+      color: var(--text-muted);
+
+      &:hover {
+        color: #06ffa5;
+      }
+    }
+  }
+
+  // Floating nav dark mode
+  .floating-nav {
+    background: rgba(26, 26, 46, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      background: rgba(26, 26, 46, 0.3);
+    }
+
+    .nav-item {
+      color: var(--text-muted);
+
+      &:hover,
+      &.active {
+        color: white;
+      }
+    }
+  }
+}
+
+// Smooth theme transition
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+// =========================================================================
+// ENHANCED RESPONSIVE DESIGN
+// =========================================================================
+
+@media (max-width: 1200px) {
+  .resume-wrapper-inner {
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+
+  .resume-body .row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .theme-toggle-container {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .theme-toggle {
+    width: 60px;
+    height: 30px;
+
+    .theme-toggle-thumb {
+      width: 24px;
+      height: 24px;
+
+      i {
+        font-size: 10px;
+      }
+    }
+  }
+
+  [data-theme="dark"] .theme-toggle-thumb {
+    transform: translateX(30px);
+  }
+
+  .resume-wrapper {
+    padding: 1rem 0;
+  }
+
+  .resume-wrapper-inner {
+    border-radius: 16px;
+    margin: 0 0.5rem;
+  }
+
+  .resume-header {
+    padding: 2rem 1.5rem;
+  }
+
+  .resume-body {
+    padding: 2rem 1.5rem;
+  }
+
+  .name {
+    font-size: 2.2rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .resume-section {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .resume-timeline-item {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .floating-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-wrapper-inner {
+    margin: 0 0.25rem;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .picture {
+    width: 100px;
+    height: 100px;
+  }
+
+  .resume-section {
+    padding: 1rem;
+  }
+
+  .resume-timeline-item {
+    padding: 1rem;
   }
 }
