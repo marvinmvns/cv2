@@ -1,14 +1,364 @@
-// This is the place to place Bootstrap-related CSS customizations.
-// As example you can start by importing the _bootswatch.scss file from one of the
-// theme provided by https://bootswatch.com .
+// Modern Resume Template - Bootstrap Customizations
+// Based on 2025 design trends for professional CVs
 
-// Minty 4.3.1
-// Bootswatch
+// Import modern fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-// Variables ===================================================================
+// Modern CV-specific styles
+// =========================================================================
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Montserrat" !default;
-@import url($web-font-path);
+// Modern container and layout
+.resume-wrapper {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.resume-wrapper-inner {
+  max-width: 900px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+// Modern header with gradient
+.resume-header {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  padding: 3rem 2rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+    opacity: 0.1;
+  }
+}
+
+// Modern profile picture
+.picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Modern name styling
+.name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+// Modern title/role styling
+.title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+// Modern contact info
+.resume-header ul li a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+// Modern social links
+.resume-social {
+  .fa-container {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Modern content sections
+.resume-body {
+  background: white;
+  padding: 3rem;
+}
+
+.resume-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  }
+}
+
+// Modern timeline
+.resume-timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 2.5rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    width: 2px;
+    height: calc(100% + 1rem);
+    background: linear-gradient(180deg, #e5e7eb 0%, transparent 100%);
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+// Modern job titles and company names
+.resume-position-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.resume-company-name {
+  font-weight: 500;
+  color: #2563eb;
+}
+
+.resume-position-time {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+// Modern badges
+.badge {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+
+  &.badge-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+  }
+
+  &.badge-light {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+  }
+}
+
+// Modern progress bars
+.progress {
+  height: 8px;
+  border-radius: 4px;
+  background: #f1f5f9;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.progress-bar {
+  border-radius: 4px;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  transition: width 0.6s ease;
+}
+
+// Modern skills section
+.resume-skill-name {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+// Modern cards and sections
+.resume-section {
+  margin-bottom: 3rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Improved responsive design
+@media (max-width: 768px) {
+  .resume-wrapper {
+    padding: 1rem;
+  }
+
+  .resume-wrapper-inner {
+    margin: 0;
+    border-radius: 8px;
+  }
+
+  .resume-header {
+    padding: 2rem 1.5rem;
+  }
+
+  .resume-body {
+    padding: 2rem 1.5rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+}
+
+// Smooth animations
+* {
+  transition: all 0.3s ease;
+}
+
+// Hover effects for interactivity
+.resume-timeline-item:hover {
+  transform: translateX(5px);
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+// Modern summary highlights
+.summary-highlights {
+  .highlight-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-left: 4px solid #2563eb;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #f1f5f9;
+      transform: translateX(5px);
+    }
+
+    i {
+      font-size: 1.25rem;
+      min-width: 24px;
+    }
+
+    span {
+      font-weight: 500;
+      color: #374151;
+    }
+  }
+}
+
+// Enhanced contact info
+.contact-info {
+  a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  i {
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+}
+
+// Modern education and certification styles
+.resume-degree {
+  color: #1f2937;
+}
+
+.resume-degree-org {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.resume-degree-time {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+// Modern footer
+.footer-modern {
+  background: #f8fafc !important;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 2rem;
+
+  .social-links {
+    a {
+      color: #64748b;
+      font-size: 1.25rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #2563eb;
+        text-decoration: none;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .text-muted {
+    color: #64748b !important;
+  }
+}
 
 // Navbar ======================================================================
 

@@ -32,203 +32,154 @@
 
 
 
-    <header class="resume-header pt-4 pt-md-0">
-      <div class="media flex-column flex-md-row">
-        <img class="mr-3 img-fluid picture mx-auto" src="https://media-exp1.licdn.com/dms/image/C4D03AQH6DmmNaz9z6A/profile-displayphoto-shrink_200_200/0/1624921612042?e=1631750400&v=beta&t=C3r0K6UImTntmjwLudY5mjw_jffTP8puIAYremuIIps" alt="">
-        <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
-
-          <div class="primary-info">
-            <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Marcus Segundo</h1>
-            <div class="title mb-3">Coordenador de Engenharia e Qualidade</div>
-            <ul class="list-unstyled">
-              <li class="mb-2"><a href="#"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>marcus@segundo.me</a></li>
-              <li><a href="#"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>+55 11 9 8741-5290</a></li>
-            </ul>
+    <header class="resume-header">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-md-3 text-center mb-3 mb-md-0">
+            <img class="picture" src="https://media-exp1.licdn.com/dms/image/C4D03AQH6DmmNaz9z6A/profile-displayphoto-shrink_200_200/0/1624921612042?e=1631750400&v=beta&t=C3r0K6UImTntmjwLudY5mjw_jffTP8puIAYremuIIps" alt="Marcus Segundo">
+          </div>
+          <div class="col-md-6">
+            <div class="primary-info">
+              <h1 class="name">Marcus Segundo</h1>
+              <div class="title">Technology Leader | F1RST Digital Services</div>
+              <div class="contact-info mt-3">
+                <div class="mb-2">
+                  <i class="far fa-envelope mr-2"></i>
+                  <a href="mailto:marcus@segundo.me">marcus@segundo.me</a>
+                </div>
+                <div class="mb-2">
+                  <i class="fas fa-mobile-alt mr-2"></i>
+                  <a href="tel:+5511987415290">+55 11 9 8741-5290</a>
+                </div>
+              </div>
+            </div>
           </div><!--//primary-info-->
 
-          <div class="secondary-info ml-md-auto mt-2">
-            <ul class="resume-social list-unstyled">
-
-              <li class="mb-3">
-                <a href="https://github.com/marvinmvns" target="_blank">
-                  <span class="fa-container text-center mr-2">
-                    <i class="fab fa-github-alt fa-fw"></i>
-                   <fa-icon [icon]="['fab', 'github-alt']" [fixedWidth]="true"></fa-icon> 
-                  </span>github.com/marvinmvns
-                </a>
-              </li>
-
-           <li class="mb-3">
-                <a href="https://www.linkedin.com/in/marvin1986/" target="_blank">
-                  <span class="fa-container text-center mr-2">
-                    <i class="fab fa-linkedin-in"></i>
-                     <fa-icon [icon]="['fab', 'linkedin']" [fixedWidth]="true"></fa-icon>
-                  </span>https://www.linkedin.com/in/marvin1986/
-                </a>
-              </li> 
-
-
-              <li class="mb-3">
-                <a href="https://www.facebook.com/marvinthings" target="_blank">
-                  <span class="fa-container text-center mr-2">
-                    <i class="fab fa-facebook"></i>
-                     <fa-icon [icon]="['fab', 'facebook]" [fixedWidth]="true"></fa-icon>
-                  </span>https://www.facebook.com/marvinthings
-                </a>
-              </li> 
-
-              <!--<li class="mb-3">-->
-                <!--<a href="#">-->
-                  <!--<span class="fa-container text-center mr-2">-->
-                    <!--<i class="fab fa-codepen fa-fw"></i>-->
-                  <!--</span>codepen.io/username/-->
-                <!--</a>-->
-              <!--</li>-->
-
-
-            </ul>
-          </div><!--//secondary-info-->
-
-        </div><!--//media-body-->
-      </div><!--//media-->
+          <div class="col-md-3">
+            <div class="secondary-info">
+              <div class="resume-social">
+                <div class="d-flex flex-wrap justify-content-center justify-content-md-end">
+                  <a href="https://github.com/marvinmvns" target="_blank" class="mb-2 mr-2" title="GitHub">
+                    <span class="fa-container">
+                      <i class="fab fa-github"></i>
+                    </span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/marvin1986/" target="_blank" class="mb-2 mr-2" title="LinkedIn">
+                    <span class="fa-container">
+                      <i class="fab fa-linkedin-in"></i>
+                    </span>
+                  </a>
+                  <a href="https://www.facebook.com/marvinthings" target="_blank" class="mb-2" title="Facebook">
+                    <span class="fa-container">
+                      <i class="fab fa-facebook"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div><!--//secondary-info-->
+          </div>
+        </div><!--//row-->
+      </div><!--//container-->
     </header>
 
 
 
     <div class="resume-body p-5">
-      <section class="resume-section summary-section mb-5">
-        <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Sumário de Carreira </h2>
+      <section class="resume-section summary-section">
+        <h2 class="resume-section-title">Sumário Profissional</h2>
         <div class="resume-section-content">
-          <p class="mb-0">Coordenador de Tecnologia e de Qualidade em sistemas bancários</p>
-          <p class="mb-0">Desenvolvimento em Python, Angular, Java e PHP</p>
-          <p class="mb-0">Automação de Testes, Esteiras de desenvolvimento</p>
+          <div class="summary-highlights">
+            <div class="highlight-item mb-3">
+              <i class="fas fa-users text-primary mr-3"></i>
+              <span>Mais de 17 anos de experiência em TI, incluindo 4 anos liderando equipes multidisciplinares</span>
+            </div>
+            <div class="highlight-item mb-3">
+              <i class="fas fa-cloud text-primary mr-3"></i>
+              <span>Especialista em Cloud Computing, Open Finance e transformação digital</span>
+            </div>
+            <div class="highlight-item mb-3">
+              <i class="fas fa-brain text-primary mr-3"></i>
+              <span>Expertise em Inteligência Artificial, Data Engineering e tecnologias generativas</span>
+            </div>
+            <div class="highlight-item mb-3">
+              <i class="fas fa-award text-primary mr-3"></i>
+              <span>AWS Certified Cloud Practitioner</span>
+            </div>
+          </div>
         </div>
       </section><!--//summary-section-->
       <div class="row">
         <div class="col-lg-9">
-          <section class="resume-section experience-section mb-5">
-            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Experiência de trabalho</h2>
+          <section class="resume-section experience-section">
+            <h2 class="resume-section-title">Experiência Profissional</h2>
             <div class="resume-section-content">
               <div class="resume-timeline position-relative">
 
-
-
-                <article class="resume-timeline-item position-relative pb-5">
-
+                <article class="resume-timeline-item position-relative">
                   <div class="resume-timeline-item-header mb-2">
                     <div class="d-flex flex-column flex-md-row">
-                      <h3 class="resume-position-title font-weight-bold mb-1">ReactNative / React / Node 개발자</h3>
-                      <div class="resume-company-name ml-auto">---</div>
-                    </div><!--//row-->
-                    <div class="resume-position-time">2012 - Atualmente</div>
-                  </div><!--//resume-timeline-item-header-->
+                      <h3 class="resume-position-title">Technology Leader</h3>
+                      <div class="resume-company-name ml-auto">F1RST Digital Services</div>
+                    </div>
+                    <div class="resume-position-time">Atual</div>
+                  </div>
                   <div class="resume-timeline-item-desc">
-                    <p>자유로운 개발중.</p>
+                    <p>Lidera equipes multidisciplinares com foco em inovação tecnológica, transformação digital e implementação de soluções em Cloud Computing e Open Finance.</p>
 
-                    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Tecnolgias e Habilidades de Interesse:</h4>
-                    <ul class="list-inline">
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Python</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Java</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Machine Learning</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Ciência de Dados</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">AWS</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Node.js</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Automação de Testes</span></li>                     
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Embarcados</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">OAuth</span></li>
+                    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Principais Responsabilidades:</h4>
+                    <ul class="mb-3">
+                      <li>Liderança de equipes multidisciplinares de desenvolvimento</li>
+                      <li>Estratégia e implementação de soluções Cloud (AWS)</li>
+                      <li>Desenvolvimento de projetos em Open Finance</li>
+                      <li>Implementação de soluções de Inteligência Artificial</li>
+                      <li>Gestão de projetos de transformação digital</li>
                     </ul>
-                  </div><!--//resume-timeline-item-desc-->
 
-                </article><!--//resume-timeline-item-->
+                    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Tecnologias:</h4>
+                    <ul class="list-inline">
+                      <li class="list-inline-item"><span class="badge badge-primary">AWS Cloud</span></li>
+                      <li class="list-inline-item"><span class="badge badge-primary">Data Engineering</span></li>
+                      <li class="list-inline-item"><span class="badge badge-primary">Artificial Intelligence</span></li>
+                      <li class="list-inline-item"><span class="badge badge-primary">Open Finance</span></li>
+                      <li class="list-inline-item"><span class="badge badge-primary">Team Leadership</span></li>
+                      <li class="list-inline-item"><span class="badge badge-primary">Digital Transformation</span></li>
+                    </ul>
+                  </div>
+                </article>
 
 
 
                 <article class="resume-timeline-item position-relative">
-
                   <div class="resume-timeline-item-header mb-2">
                     <div class="d-flex flex-column flex-md-row">
-                      <h3 class="resume-position-title font-weight-bold mb-1">소프트웨어 엔지니어 <small class="text-muted">(개발자)</small></h3>
-                      <div class="resume-company-name ml-auto">스마트팩토리 연구센터</div>
-                    </div><!--//row-->
-                    <div class="resume-position-time">2017 - 2018</div>
-                  </div><!--//resume-timeline-item-header-->
+                      <h3 class="resume-position-title">Senior Software Engineer</h3>
+                      <div class="resume-company-name ml-auto">Empresas Anteriores</div>
+                    </div>
+                    <div class="resume-position-time">2007 - 2023</div>
+                  </div>
                   <div class="resume-timeline-item-desc">
-                    <p>공정 관리 솔루션 개발</p>
-                    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-                    <ul class="list-inline">
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Grails</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Java</span></li>
+                    <p>Experiência consolidada em desenvolvimento de software e liderança técnica em múltiplas organizações, acumulando mais de 17 anos de experiência em TI.</p>
+
+                    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Principais Conquistas:</h4>
+                    <ul class="mb-3">
+                      <li>Desenvolvimento de soluções escaláveis em cloud computing</li>
+                      <li>Implementação de arquiteturas de dados e pipelines de ETL</li>
+                      <li>Liderança técnica em projetos de transformação digital</li>
+                      <li>Mentoria e desenvolvimento de equipes técnicas</li>
                     </ul>
-                  </div><!--//resume-timeline-item-desc-->
 
-                </article><!--//resume-timeline-item-->
-
-
-                <article class="resume-timeline-item position-relative">
-
-                  <div class="resume-timeline-item-header mb-2">
-                    <div class="d-flex flex-column flex-md-row">
-                      <h3 class="resume-position-title font-weight-bold mb-1">소프트웨어 엔지니어 <small class="text-muted">(개발자)</small></h3>
-                      <div class="resume-company-name ml-auto">Nomit</div>
-                    </div><!--//row-->
-                    <div class="resume-position-time">2016 - 2017</div>
-                  </div><!--//resume-timeline-item-header-->
-                  <div class="resume-timeline-item-desc">
-                    <p>협업 솔루션 개발</p>
-                    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
+                    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Stack Tecnológico:</h4>
                     <ul class="list-inline">
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Angular.js</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Node.js</span></li>
+                      <li class="list-inline-item"><span class="badge badge-primary">Python</span></li>
+                      <li class="list-inline-item"><span class="badge badge-primary">Java</span></li>
+                      <li class="list-inline-item"><span class="badge badge-primary">Node.js</span></li>
+                      <li class="list-inline-item"><span class="badge badge-primary">Angular</span></li>
+                      <li class="list-inline-item"><span class="badge badge-primary">AWS</span></li>
+                      <li class="list-inline-item"><span class="badge badge-primary">Docker</span></li>
+                      <li class="list-inline-item"><span class="badge badge-primary">Kubernetes</span></li>
                     </ul>
-                  </div><!--//resume-timeline-item-desc-->
-
-                </article><!--//resume-timeline-item-->
-
-
-                <article class="resume-timeline-item position-relative">
-
-                  <div class="resume-timeline-item-header mb-2">
-                    <div class="d-flex flex-column flex-md-row">
-                      <h3 class="resume-position-title font-weight-bold mb-1">소프트웨어 엔지니어 <small class="text-muted">(개발자)</small></h3>
-                      <div class="resume-company-name ml-auto">더클레버</div>
-                    </div><!--//row-->
-                    <div class="resume-position-time">2014 - 2015</div>
-                  </div><!--//resume-timeline-item-header-->
-                  <div class="resume-timeline-item-desc">
-                    <p>채팅 앱 개발</p>
-                    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-                    <ul class="list-inline">
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Node.js</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Mysql</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Express</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Android</span></li>
-                    </ul>
-                  </div><!--//resume-timeline-item-desc-->
-
-                </article><!--//resume-timeline-item-->
-
-
-                <article class="resume-timeline-item position-relative">
-
-                  <div class="resume-timeline-item-header mb-2">
-                    <div class="d-flex flex-column flex-md-row">
-                      <h3 class="resume-position-title font-weight-bold mb-1">소프트웨어 엔지니어 <small class="text-muted">(개발자)</small></h3>
-                      <div class="resume-company-name ml-auto">심플리</div>
-                    </div><!--//row-->
-                    <div class="resume-position-time">2012 - 2013</div>
-                  </div><!--//resume-timeline-item-header-->
-                  <div class="resume-timeline-item-desc">
-                    <p>레스토랑 예약 사이트 개발</p>
-                    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-                    <ul class="list-inline">
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">PHP / Spring</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">jQuery</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">HTML/CSS</span></li>
-                      <li class="list-inline-item"><span class="badge badge-primary badge-pill">Mysql</span></li>
-                    </ul>
-                  </div><!--//resume-timeline-item-desc-->
-
-                </article><!--//resume-timeline-item-->
+                  </div>
+                </article>
 
 
 
@@ -238,99 +189,102 @@
         </div>
         <div class="col-lg-3">
 
-          <section class="resume-section skills-section mb-5">
-            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Ferramentas &amp; Habilidades</h2>
+          <section class="resume-section skills-section">
+            <h2 class="resume-section-title">Habilidades Técnicas</h2>
             <div class="resume-section-content">
-              <div class="resume-skill-item">
 
-              </div><!--//resume-skill-item-->
-
-              <div class="resume-skill-item">
-                <h4 class="resume-skills-cat font-weight-bold">Backend</h4>
+              <div class="resume-skill-item mb-4">
+                <h4 class="resume-skills-cat font-weight-bold">Cloud & Infrastructure</h4>
                 <ul class="list-unstyled">
                   <li class="mb-2">
-                    <div class="resume-skill-name">Node.js</div>
+                    <div class="resume-skill-name">AWS Cloud Services</div>
                     <div class="progress resume-progress">
-                      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </li>
                   <li class="mb-2">
-                    <div class="resume-skill-name">Java/Spring</div>
+                    <div class="resume-skill-name">Data Engineering</div>
                     <div class="progress resume-progress">
-                      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </li>
+                  <li class="mb-2">
+                    <div class="resume-skill-name">DevOps & CI/CD</div>
+                    <div class="progress resume-progress">
+                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="resume-skill-item mb-4">
+                <h4 class="resume-skills-cat font-weight-bold">Programming & Development</h4>
+                <ul class="list-unstyled">
                   <li class="mb-2">
                     <div class="resume-skill-name">Python</div>
                     <div class="progress resume-progress">
-                      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </li>
-
+                  <li class="mb-2">
+                    <div class="resume-skill-name">Java</div>
+                    <div class="progress resume-progress">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </li>
+                  <li class="mb-2">
+                    <div class="resume-skill-name">JavaScript/Node.js</div>
+                    <div class="progress resume-progress">
+                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </li>
                 </ul>
-              </div><!--//resume-skill-item-->
-
-
-              <h4 class="resume-skills-cat font-weight-bold">Frontend</h4>
-              <ul class="list-unstyled mb-4">
-
-                <li class="mb-2">
-                  <div class="resume-skill-name">HTML/CSS</div>
-                  <div class="progress resume-progress">
-                    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </li>
-                <li class="mb-2">
-                  <div class="resume-skill-name">Angular</div>
-                  <div class="progress resume-progress">
-                    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </li>                  
-              </ul>
+              </div>
 
               <div class="resume-skill-item">
-                <h4 class="resume-skills-cat font-weight-bold">Outras</h4>
+                <h4 class="resume-skills-cat font-weight-bold">Especialidades</h4>
                 <ul class="list-inline">
-                  <li class="list-inline-item"><span class="badge badge-light">Git</span></li>
-                  <li class="list-inline-item"><span class="badge badge-light">Pirâmide de Testes</span></li>
-                  <li class="list-inline-item"><span class="badge badge-light">IOT</span></li>
-                  <li class="list-inline-item"><span class="badge badge-light">Impressão 3d</span></li>
+                  <li class="list-inline-item"><span class="badge badge-light">Artificial Intelligence</span></li>
+                  <li class="list-inline-item"><span class="badge badge-light">Open Finance</span></li>
+                  <li class="list-inline-item"><span class="badge badge-light">Team Leadership</span></li>
+                  <li class="list-inline-item"><span class="badge badge-light">Digital Transformation</span></li>
+                  <li class="list-inline-item"><span class="badge badge-light">Architecture Design</span></li>
                 </ul>
-              </div><!--//resume-skill-item-->
+              </div>
             </div><!--resume-section-content-->
           </section><!--//skills-section-->
 
-          <section class="resume-section education-section mb-5">
-            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Educação</h2>
+          <section class="resume-section education-section">
+            <h2 class="resume-section-title">Formação</h2>
             <div class="resume-section-content">
               <ul class="list-unstyled">
+                <li class="mb-3">
+                  <div class="resume-degree font-weight-bold">Pós-graduação em Tecnologia</div>
+                  <div class="resume-degree-org">FIAP</div>
+                  <div class="resume-degree-time">2009 - 2011</div>
+                </li>
                 <li>
-                  <div class="resume-degree font-weight-bold"> Analise e Desenvolvimento de Sistemas </div>
-                  <div class="resume-degree-org">Faculdade Oswaldo Cruz</div>
-                  <div class="resume-degree-time">2009 - 2010</div>
-                </li>                
-                <li>
-                  <div class="resume-degree font-weight-bold">Sistemas de Informação</div>
-                  <div class="resume-degree-org">Universidade Presbiteriana Mackenzie</div>
-                  <div class="resume-degree-time">2004 - 2009</div>
+                  <div class="resume-degree font-weight-bold">Graduação em Tecnologia</div>
+                  <div class="resume-degree-org">FIAP</div>
+                  <div class="resume-degree-time">2005 - 2009</div>
                 </li>
               </ul>
             </div>
           </section><!--//education-section-->
 
-          <section class="resume-section education-section mb-5">
-            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">CertificaÇÕES</h2>
+          <section class="resume-section education-section">
+            <h2 class="resume-section-title">Certificações</h2>
             <div class="resume-section-content">
               <ul class="list-unstyled">
-                <li>
-                  <div class="resume-degree font-weight-bold">Solutions Architect – Associate</div>
-                  <div class="resume-degree-org">AWS</div>
-                  <div class="resume-degree-time">07/2021</div>
-                </li>
-                <li>
-                  <div class="resume-degree font-weight-bold">Certified Cloud Practitioner</div>
-                  <div class="resume-degree-org">AWS</div>
-                  <div class="resume-degree-time">05/2021</div>
+                <li class="mb-3">
+                  <div class="d-flex align-items-center">
+                    <i class="fab fa-aws text-warning mr-2"></i>
+                    <div>
+                      <div class="resume-degree font-weight-bold">AWS Certified Cloud Practitioner</div>
+                      <div class="resume-degree-org">Amazon Web Services</div>
+                      <div class="resume-degree-time">Mai 2021 - Mai 2024</div>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -354,24 +308,51 @@
             <!--</div>-->
           </section><!--//interests-section-->
 
-          <section class="resume-section language-section mb-5">
-            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Idiomas</h2>
+          <section class="resume-section language-section">
+            <h2 class="resume-section-title">Idiomas</h2>
             <div class="resume-section-content">
               <ul class="list-unstyled resume-lang-list">
-                <li class="mb-2"><span class="resume-lang-name font-weight-bold">Português</span> <small class="text-muted font-weight-normal">(Nativo)</small></li>
-                <!--<li class="mb-2 align-middle"><span class="resume-lang-name font-weight-bold">French</span> <small class="text-muted font-weight-normal">(Professional)</small></li>-->
-                <li><span class="resume-lang-name font-weight-bold">Inglês</span> <small class="text-muted font-weight-normal">(Intermediário)</small></li>
+                <li class="mb-2">
+                  <span class="resume-lang-name font-weight-bold">Português</span>
+                  <small class="text-muted font-weight-normal">(Nativo)</small>
+                </li>
+                <li class="mb-2">
+                  <span class="resume-lang-name font-weight-bold">Inglês</span>
+                  <small class="text-muted font-weight-normal">(Avançado)</small>
+                </li>
               </ul>
             </div>
           </section><!--//language-section-->
 
-          <section class="resume-section interests-section mb-5">
-            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interesses</h2>
+          <section class="resume-section interests-section">
+            <h2 class="resume-section-title">Áreas de Interesse</h2>
             <div class="resume-section-content">
-              <ul class="list-unstyled">
-                <li class="mb-1">Banking</li>
-                <li class="mb-1">Startups</li>
-                <li class="mb-1">Soluções em Cloud</li>
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <span class="badge badge-light">
+                    <i class="fas fa-brain mr-1"></i>Artificial Intelligence
+                  </span>
+                </li>
+                <li class="list-inline-item">
+                  <span class="badge badge-light">
+                    <i class="fas fa-rocket mr-1"></i>Startups
+                  </span>
+                </li>
+                <li class="list-inline-item">
+                  <span class="badge badge-light">
+                    <i class="fas fa-cloud mr-1"></i>Cloud Computing
+                  </span>
+                </li>
+                <li class="list-inline-item">
+                  <span class="badge badge-light">
+                    <i class="fas fa-university mr-1"></i>Open Finance
+                  </span>
+                </li>
+                <li class="list-inline-item">
+                  <span class="badge badge-light">
+                    <i class="fas fa-chart-line mr-1"></i>Data Science
+                  </span>
+                </li>
               </ul>
             </div>
           </section><!--//interests-section-->
@@ -384,45 +365,42 @@
   </div>
 </article>
 
-
-<footer class="footer text-center pt-2 pb-5">
-  <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-  <small class="copyright">Desenvolvido com <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+<footer class="footer-modern bg-light text-center py-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-left">
+        <p class="mb-0">
+          <strong>Marcus Segundo</strong> - Technology Leader
+        </p>
+        <p class="mb-0 text-muted">
+          <a href="mailto:marcus@segundo.me" class="text-decoration-none">
+            <i class="far fa-envelope mr-1"></i>marcus@segundo.me
+          </a>
+        </p>
+      </div>
+      <div class="col-md-6 text-right">
+        <div class="social-links">
+          <a href="https://github.com/marvinmvns" target="_blank" class="text-decoration-none mr-3">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/marvin1986/" target="_blank" class="text-decoration-none mr-3">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.facebook.com/marvinthings" target="_blank" class="text-decoration-none">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+        <p class="mb-0 mt-2">
+          <small class="text-muted">© 2025 Marcus Segundo</small>
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
 
   </section>
 
 </article>
-
-<div class="py-5 border-top">
-  <div class="container">
-
-    <p class="h5 mb-3">Marvin</p>
-
-    <div class="row">
-
-      <div class="col-sm">
-        <ul class="list-unstyled">
-          <li>thewavelet</li><li>
-              <a href="mailto:marcus@segundo.me">
-                marcus@segundo.me
-              </a>
-            </li></ul>
-      </div>
-
-
-      <div class="col-sm text-right">
-        <p> Profile Page</p>
-
-        <p>
-          <a href="https://nicolas-van.github.io/bootstrap-4-github-pages/">Powered by Bootstrap 4 Github Pages</a>
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</div>
 </body>
 
 </html>
