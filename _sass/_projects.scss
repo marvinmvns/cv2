@@ -1,0 +1,85 @@
+/* Projects: toggle button + panel */
+
+.project-card {
+  border-left: 2px solid var(--border-color);
+}
+
+.project-card button[aria-controls] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-medium);
+  color: var(--text-primary);
+  border-radius: 8px;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.project-card button[aria-controls]:hover {
+  background: #2f2f2f;
+}
+
+.project-card button[aria-controls]:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(77, 184, 196, 0.25);
+}
+
+.project-caret {
+  margin-left: auto;
+  transition: transform 0.2s ease;
+}
+
+.project-card button[aria-controls][aria-expanded="true"] .project-caret {
+  transform: rotate(180deg);
+}
+
+.project-details {
+  display: grid;
+  overflow: hidden;
+}
+
+.project-details-wrapper {
+  overflow: hidden;
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+/* Keep quick buttons visually consistent */
+.projects-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+}
+
+.projects-buttons-container button[data-open-project] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--accent-cyan);
+  background: transparent;
+  color: var(--accent-cyan);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.projects-buttons-container button[data-open-project]:hover {
+  background: rgba(77, 184, 196, 0.08);
+}
+
+/* Visually-hidden utility (in case not present) */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}

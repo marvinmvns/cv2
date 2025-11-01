@@ -1,0 +1,9 @@
+.slide-up {
+    transition: grid-template-rows 0.3s ease-in-out;
+    grid-template-rows: 0fr;
+}
+
+.slide-down {
+    transition: grid-template-rows 0.3s ease-in-out;
+    grid-template-rows: 1fr;
+}
