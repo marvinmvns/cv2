@@ -4,6 +4,8 @@
 @import "theme";
 @import "utilities";
 @import "accessibility";
+@import "projects";
+@import "video";
 
 /* Minimal baseline overrides layered after theme CSS files */
 
@@ -43,9 +45,9 @@ a.resume-link:hover { text-decoration: underline; }
 /* Subtle image polish */
 img.resume-profile-image { aspect-ratio: 1 / 1; object-fit: cover; }
 
-/* Buttons in Projects: tone down glow a bit */
-.project-button { border-radius: 10px; }
-.project-button:hover { transform: translateY(-1px); }
+/* Quick actions in Projects: subtle hover lift */
+.projects-buttons-container button[data-open-project] { border-radius: 10px; }
+.projects-buttons-container button[data-open-project]:hover { transform: translateY(-1px); }
 
 /* Horizontal rule polish */
 hr { opacity: 0.35; }
