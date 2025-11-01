@@ -1,0 +1,15 @@
+/* Utilities: spacing tweaks, containers, subtle defaults */
+
+/* Constrain overly long text lines for readability */
+.resume-intro .col.text-start { max-width: 75ch; }
+
+/* Improve list spacing */
+.resume-list li, .resume-skills-list li { margin-bottom: 0.4rem; }
+
+/* Tame heavy shadows from theme if present */
+.resume-wrapper { box-shadow: 0 8px 24px rgba(0,0,0,0.28); }
+
+/* Better social icon hover feedback without excessive motion */
+.resume-social-list a { transition: transform 120ms ease, color 120ms ease; }
+.resume-social-list a:hover { transform: translateY(-2px); }
+

@@ -1,0 +1,32 @@
+/* Theme tokens & refinements layered over existing CSS */
+
+:root {
+  --elev-bg: rgba(26,26,26,0.9);
+  --surface: rgba(36,36,36,1);
+  --text: #e6e6e6;
+  --text-muted: #a6a6a6;
+  --accent: #4db8c4; /* cyan */
+  --accent-2: #5fc78a; /* green */
+  --border: #2f2f2f;
+}
+
+/* Ensure good contrast and readable spacing */
+body { color: var(--text); }
+.theme-bg-light { background: var(--elev-bg); }
+
+.resume-wrapper {
+  background: var(--surface) !important;
+  border: 1px solid var(--border);
+}
+
+.resume-section-heading {
+  letter-spacing: 0.08em;
+  border-bottom: 1.5px solid var(--accent);
+}
+
+.item-meta, .text-muted { color: var(--text-muted) !important; }
+
+/* Accessible link colors with clearer hover states */
+a, .resume-link { color: var(--accent); }
+a:hover, .resume-link:hover { color: var(--accent-2); }
+

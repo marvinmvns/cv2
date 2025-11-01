@@ -40,3 +40,6 @@ exclude:
   - node_modules
   - update_boostrap.sh
   - update_bootstrap.sh
+  - vendor
+  - vendor/bundle
+  - AGENTS.md
