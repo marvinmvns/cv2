@@ -161,26 +161,31 @@
 
 							</section><!--//work-section-->
 
-							<section class="projects-section py-3">
+								<section class="projects-section py-3" aria-label="Projetos">
 								<h3 class="text-uppercase resume-section-heading mb-4">Projetos</h3>
 
-                    <div class="projects-buttons-container mb-4">
-                        <a href="https://www.youtube.com/watch?v=dqDf5Zv" class="project-button" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-car me-2"></i>
-                            FastrackGPS
-                        </a>
-                        <a href="https://pt.wikipedia.org/wiki/Marvin,_o_Androide_Paranóide" class="project-button" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-robot me-2"></i>
-                            Marvin Robô
-                        </a>
+                    <div class="projects-buttons-container mb-4" aria-label="Ações rápidas dos projetos">
+                        <button type="button" data-open-project="project-fastrackgps">
+                            <i class="fas fa-car me-2" aria-hidden="true"></i>
+                            <span class="visually-hidden">Abrir detalhes do projeto </span>FastrackGPS
+                        </button>
+                        <button type="button" data-open-project="project-marvin">
+                            <i class="fas fa-robot me-2" aria-hidden="true"></i>
+                            <span class="visually-hidden">Abrir detalhes do projeto </span>Marvin Robô
+                        </button>
                     </div>
 
-								<div class="item mb-3">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Sistema de Rastreamento Veicular - FastrackGPS</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">2009 - 2019</div>
-									</div>
-									<div class="item-content">
+									<div class="item mb-3 project-card">
+										<div class="item-heading row align-items-center mb-2">
+											<h4 class="item-title col-12 col-md-8 col-lg-8 mb-2 mb-md-0">
+                                        <button aria-expanded="false" aria-controls="project-fastrackgps">
+                                            Sistema de Rastreamento Veicular - FastrackGPS
+                                            <span class="project-caret" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                                        </button>
+                                        </h4>
+											<div class="item-meta col-12 col-md-4 col-lg-4 text-muted text-start text-md-end">2009 - 2019</div>
+										</div>
+										<div id="project-fastrackgps" class="item-content project-details" hidden>
 										<p>Plataforma de rastreamento veicular em tempo real desenvolvida do zero. Sistema pioneiro que integrava dispositivos GPS chineses (TK102) via GPRS, processava dados de geolocalização e exibia em mapas interativos. Atendeu quase 10.000 clientes com modelo de assinatura mensal.</p>
 										<ul class="resume-list">
 											<li><strong>Backend:</strong> PHP com sockets para recepção de dados GPRS, protocolo proprietário de comunicação com rastreadores GPS</li>
@@ -191,20 +196,24 @@
 											<li><strong>Banco de Dados:</strong> Armazenamento de geolocalização, velocidade, altitude, timestamps</li>
 											<li><strong>Modelo de Negócio:</strong> SaaS com aluguel mensal de R$ 10,00, gestão de clientes e suporte técnico</li>
 										</ul>
-										<p class="mt-3">
-											<a href="https://www.youtube.com/watch?v=dqDf5Zv" target="_blank" rel="noopener noreferrer" class="resume-link me-3"><i class="fas fa-video me-1"></i>Vídeo demonstrativo</a>
-											<a href="https://github.com/marvinmvns" target="_blank" rel="noopener noreferrer" class="resume-link me-3"><i class="fab fa-github me-1"></i>Código fonte</a>
-											<a href="https://www.dx.com" target="_blank" rel="noopener noreferrer" class="resume-link me-3"><i class="fas fa-shopping-cart me-1"></i>Dealextreme (hardware)</a>
-										</p>
-									</div>
+																<p class="mt-3">
+																	<a href="https://www.youtube.com/watch?v=sEYYsOFPMF8&t" target="_blank" rel="noopener noreferrer" class="resume-link me-3"><i class="fas fa-video me-1"></i>Vídeo demonstrativo</a>
+																	<a href="https://github.com/marvinmvns" target="_blank" rel="noopener noreferrer" class="resume-link me-3"><i class="fab fa-github me-1"></i>Código fonte</a>
+																	<a href="https://www.dx.com" target="_blank" rel="noopener noreferrer" class="resume-link me-3"><i class="fas fa-shopping-cart me-1"></i>Dealextreme (hardware)</a>
+																</p>									</div>
 								</div><!--//item-->
 
-								<div class="item mb-3">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Marvin - Robô com IA Generativa</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">2023 - 2024</div>
-									</div>
-									<div class="item-content">
+									<div class="item mb-3 project-card">
+										<div class="item-heading row align-items-center mb-2">
+											<h4 class="item-title col-12 col-md-8 col-lg-8 mb-2 mb-md-0">
+                                        <button aria-expanded="false" aria-controls="project-marvin">
+                                            Marvin - Robô com IA Generativa
+                                            <span class="project-caret" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                                        </button>
+                                        </h4>
+											<div class="item-meta col-12 col-md-4 col-lg-4 text-muted text-start text-md-end">2023 - 2024</div>
+										</div>
+										<div id="project-marvin" class="item-content project-details" hidden>
 										<p>Robô assistente virtual com IA Generativa inspirado em Marvin, o Androide Paranóide do Mochileiro das Galáxias. Construído com impressão 3D e Raspberry Pi 4, executa modelo Llama 2.0 localmente com processamento de voz em tempo real. Sistema completo de hotword detection, speech-to-text, inferência LLM e text-to-speech.</p>
 										<ul class="resume-list">
 											<li><strong>Hardware:</strong> Raspberry Pi 4b 4GB, Câmera PS3EYE (microfone), Anel LED programável, Caixa de som</li>
@@ -344,6 +353,8 @@
 		</div><!--//container-->
 
             <footer class="footer text-center py-4"></footer>
+
+            <script defer src="assets/js/projects.js"></script>
 
 	</div><!--//main-wrapper-->
 
