@@ -477,6 +477,7 @@ i.fas, i.fab, i.far {
         inset 0 0 10px rgba(0, 255, 255, 0.05);
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .projects-buttons-container button::before {
@@ -509,6 +510,74 @@ i.fas, i.fab, i.far {
     color: inherit !important;
     animation: none !important;
     font-size: 16px;
+}
+
+/* Botões de toggle dos projetos */
+.item-title button {
+    background: none;
+    border: none;
+    color: var(--accent-neon) !important;
+    font-weight: 600;
+    font-size: inherit;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.item-title button:hover {
+    color: var(--accent-cyan) !important;
+}
+
+/* Chevron do projeto */
+.project-caret {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.item-title button[aria-expanded="true"] .project-caret {
+    transform: rotate(180deg);
+}
+
+/* Animação de slide para projetos */
+.project-details {
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-details.slide-down {
+    animation: slideDown 0.3s ease-out forwards;
+}
+
+.project-details.slide-up {
+    animation: slideUp 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 3000px;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        max-height: 3000px;
+    }
+    to {
+        opacity: 0;
+        max-height: 0;
+    }
 }
 
 /* Responsividade - mantém o tema em mobile */
