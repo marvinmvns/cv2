@@ -46,10 +46,9 @@ body {
 }
 
 .resume-name {
-    color: var(--accent-cyan) !important;
-    text-shadow: 0 0 10px var(--accent-cyan);
+    color: #80e5e5 !important;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
     font-weight: 900;
-    animation: neonFlicker 5s infinite;
 }
 
 .resume-tagline {
@@ -414,6 +413,69 @@ i.fas, i.fab, i.far {
     }
 }
 
+/* Seção de Projetos */
+.projects-section {
+    margin-top: 2rem;
+}
+
+.projects-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.project-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background: var(--bg-medium) !important;
+    color: var(--accent-cyan) !important;
+    border: 2px solid var(--accent-cyan);
+    border-radius: 8px;
+    text-decoration: none !important;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow:
+        0 0 10px rgba(0, 255, 255, 0.2),
+        inset 0 0 10px rgba(0, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.project-button:hover::before {
+    left: 100%;
+}
+
+.project-button:hover {
+    background: var(--accent-cyan) !important;
+    color: var(--bg-dark) !important;
+    border-color: var(--accent-neon);
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 40px rgba(0, 255, 255, 0.3),
+        0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-button i {
+    color: inherit !important;
+    animation: none !important;
+    font-size: 16px;
+}
+
 /* Responsividade - mantém o tema em mobile */
 @media (max-width: 768px) {
     .resume-header {
@@ -430,5 +492,14 @@ i.fas, i.fab, i.far {
         width: 50px;
         height: 50px;
         font-size: 24px;
+    }
+
+    .projects-buttons-container {
+        flex-direction: column;
+    }
+
+    .project-button {
+        width: 100%;
+        justify-content: center;
     }
 }
