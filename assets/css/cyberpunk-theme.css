@@ -8,11 +8,11 @@
     --text-primary: #e0e0e0;
     --text-secondary: #b0b0b0;
     --text-muted: #808080;
-    --accent-cyan: #00ffff;
-    --accent-neon: #00ff41;
-    --accent-purple: #bd00ff;
+    --accent-cyan: #4db8c4;
+    --accent-neon: #5fc78a;
+    --accent-purple: #9966cc;
     --border-color: #333333;
-    --shadow: rgba(0, 255, 255, 0.15);
+    --shadow: rgba(77, 184, 196, 0.15);
 }
 
 /* Background principal */
@@ -46,8 +46,8 @@ body {
 }
 
 .resume-name {
-    color: #80e5e5 !important;
-    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+    color: #6db5bf !important;
+    text-shadow: 0 0 3px rgba(77, 184, 196, 0.2);
     font-weight: 900;
 }
 
@@ -231,10 +231,9 @@ hr {
 @keyframes neonFlicker {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
         text-shadow:
-            0 0 5px var(--accent-cyan),
-            0 0 10px var(--accent-cyan),
-            0 0 20px var(--accent-cyan),
-            0 0 40px var(--accent-cyan);
+            0 0 3px var(--accent-cyan),
+            0 0 6px var(--accent-cyan),
+            0 0 12px var(--accent-cyan);
         opacity: 1;
     }
     20%, 24%, 55% {
@@ -246,15 +245,15 @@ hr {
 @keyframes neonFlickerSoft {
     0%, 100% {
         text-shadow:
-            0 0 5px var(--accent-cyan),
-            0 0 10px var(--accent-cyan),
-            0 0 15px var(--accent-cyan);
+            0 0 3px var(--accent-cyan),
+            0 0 6px var(--accent-cyan),
+            0 0 9px var(--accent-cyan);
     }
     50% {
         text-shadow:
-            0 0 3px var(--accent-cyan),
-            0 0 7px var(--accent-cyan),
-            0 0 10px var(--accent-cyan);
+            0 0 2px var(--accent-cyan),
+            0 0 4px var(--accent-cyan),
+            0 0 6px var(--accent-cyan);
     }
 }
 
@@ -275,15 +274,15 @@ hr {
 @keyframes glowPulse {
     0%, 100% {
         box-shadow:
-            0 0 20px rgba(0, 255, 255, 0.3),
-            0 0 40px rgba(0, 255, 255, 0.2),
-            0 0 60px rgba(0, 255, 255, 0.1);
+            0 0 15px rgba(77, 184, 196, 0.2),
+            0 0 30px rgba(77, 184, 196, 0.15),
+            0 0 45px rgba(77, 184, 196, 0.1);
     }
     50% {
         box-shadow:
-            0 0 30px rgba(0, 255, 255, 0.5),
-            0 0 60px rgba(0, 255, 255, 0.3),
-            0 0 90px rgba(0, 255, 255, 0.2);
+            0 0 20px rgba(77, 184, 196, 0.3),
+            0 0 40px rgba(77, 184, 196, 0.2),
+            0 0 60px rgba(77, 184, 196, 0.15);
     }
 }
 
@@ -312,8 +311,8 @@ hr {
     bottom: 0;
     background: repeating-linear-gradient(
         0deg,
-        rgba(0, 255, 255, 0.03) 0px,
-        rgba(0, 255, 255, 0.03) 1px,
+        rgba(77, 184, 196, 0.015) 0px,
+        rgba(77, 184, 196, 0.015) 1px,
         transparent 1px,
         transparent 2px
     );
