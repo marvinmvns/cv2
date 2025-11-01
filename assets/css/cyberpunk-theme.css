@@ -49,6 +49,7 @@ body {
     color: var(--accent-cyan) !important;
     text-shadow: 0 0 10px var(--accent-cyan);
     font-weight: 900;
+    animation: neonFlicker 5s infinite;
 }
 
 .resume-tagline {
@@ -72,6 +73,7 @@ a:hover, .resume-link:hover {
     border: 3px solid var(--accent-cyan);
     box-shadow: 0 0 20px var(--accent-cyan);
     transition: all 0.3s ease;
+    animation: borderFlicker 8s infinite;
 }
 
 .resume-profile-image:hover {
@@ -88,6 +90,7 @@ a:hover, .resume-link:hover {
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem !important;
     position: relative;
+    animation: neonFlickerSoft 3s infinite;
 }
 
 .resume-section-heading::after {
@@ -99,6 +102,7 @@ a:hover, .resume-link:hover {
     height: 2px;
     background: var(--accent-neon);
     box-shadow: 0 0 10px var(--accent-neon);
+    animation: glowPulse 2s infinite;
 }
 
 /* Items de experiência */
@@ -224,18 +228,79 @@ hr {
     color: var(--text-muted) !important;
 }
 
-/* Animação de entrada */
-@keyframes glowPulse {
+/* Animações de cintilação neon */
+@keyframes neonFlicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow:
+            0 0 5px var(--accent-cyan),
+            0 0 10px var(--accent-cyan),
+            0 0 20px var(--accent-cyan),
+            0 0 40px var(--accent-cyan);
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+        opacity: 0.8;
+    }
+}
+
+@keyframes neonFlickerSoft {
     0%, 100% {
-        box-shadow: 0 0 30px rgba(0, 255, 255, 0.15), 0 0 60px rgba(0, 255, 255, 0.1);
+        text-shadow:
+            0 0 5px var(--accent-cyan),
+            0 0 10px var(--accent-cyan),
+            0 0 15px var(--accent-cyan);
     }
     50% {
-        box-shadow: 0 0 40px rgba(0, 255, 255, 0.25), 0 0 80px rgba(0, 255, 255, 0.15);
+        text-shadow:
+            0 0 3px var(--accent-cyan),
+            0 0 7px var(--accent-cyan),
+            0 0 10px var(--accent-cyan);
+    }
+}
+
+@keyframes borderFlicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        border-color: var(--accent-cyan);
+        box-shadow:
+            0 0 10px var(--accent-cyan),
+            0 0 20px rgba(0, 255, 255, 0.5),
+            inset 0 0 10px rgba(0, 255, 255, 0.2);
+    }
+    20%, 24%, 55% {
+        border-color: var(--border-color);
+        box-shadow: none;
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow:
+            0 0 20px rgba(0, 255, 255, 0.3),
+            0 0 40px rgba(0, 255, 255, 0.2),
+            0 0 60px rgba(0, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow:
+            0 0 30px rgba(0, 255, 255, 0.5),
+            0 0 60px rgba(0, 255, 255, 0.3),
+            0 0 90px rgba(0, 255, 255, 0.2);
+    }
+}
+
+@keyframes iconFlicker {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px var(--accent-cyan)) drop-shadow(0 0 10px var(--accent-cyan));
+        opacity: 1;
+    }
+    93%, 94%, 95% {
+        filter: none;
+        opacity: 0.7;
     }
 }
 
 .resume-wrapper {
-    animation: glowPulse 3s ease-in-out infinite;
+    animation: glowPulse 4s ease-in-out infinite;
 }
 
 /* Efeito de scanline cyberpunk (sutil) */
@@ -276,6 +341,7 @@ p, li, .item-content {
 /* Ícones */
 i.fas, i.fab, i.far {
     color: var(--accent-cyan);
+    animation: iconFlicker 7s infinite;
 }
 
 /* Hover nos items de lista */
@@ -296,6 +362,54 @@ i.fas, i.fab, i.far {
     color: var(--accent-cyan) !important;
 }
 
+/* Botão WhatsApp flutuante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--accent-neon);
+    color: var(--bg-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow:
+        0 0 20px var(--accent-neon),
+        0 0 40px rgba(0, 255, 65, 0.5),
+        0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: neonFlicker 6s infinite, float 3s ease-in-out infinite;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow:
+        0 0 30px var(--accent-neon),
+        0 0 60px rgba(0, 255, 65, 0.7),
+        0 6px 20px rgba(0, 0, 0, 0.7);
+    background: var(--accent-cyan);
+}
+
+.whatsapp-float i {
+    animation: none !important;
+    color: var(--bg-dark) !important;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 /* Responsividade - mantém o tema em mobile */
 @media (max-width: 768px) {
     .resume-header {
@@ -304,5 +418,13 @@ i.fas, i.fab, i.far {
 
     .resume-footer {
         margin: 0 -1.5rem -1.5rem -1.5rem;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
     }
 }
