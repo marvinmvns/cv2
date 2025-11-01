@@ -1,0 +1,308 @@
+/* Cyberpunk Theme - Tons de Cinza e Preto */
+
+:root {
+    --bg-dark: #0a0a0a;
+    --bg-darker: #000000;
+    --bg-light: #1a1a1a;
+    --bg-medium: #2a2a2a;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-muted: #808080;
+    --accent-cyan: #00ffff;
+    --accent-neon: #00ff41;
+    --accent-purple: #bd00ff;
+    --border-color: #333333;
+    --shadow: rgba(0, 255, 255, 0.15);
+}
+
+/* Background principal */
+body {
+    background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
+    color: var(--text-primary);
+}
+
+.main-wrapper {
+    background: transparent;
+}
+
+/* Card principal do currículo */
+.resume-wrapper {
+    background: var(--bg-light) !important;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 30px var(--shadow), 0 0 60px rgba(0, 255, 255, 0.1);
+}
+
+.theme-bg-light {
+    background: var(--bg-light) !important;
+}
+
+/* Cabeçalho */
+.resume-header {
+    background: var(--bg-medium);
+    padding: 2rem;
+    margin: -2.5rem -2.5rem 0 -2.5rem;
+    border-bottom: 2px solid var(--accent-cyan);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.resume-name {
+    color: var(--accent-cyan) !important;
+    text-shadow: 0 0 10px var(--accent-cyan);
+    font-weight: 900;
+}
+
+.resume-tagline {
+    color: var(--text-secondary) !important;
+}
+
+/* Links */
+a, .resume-link {
+    color: var(--accent-cyan) !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover, .resume-link:hover {
+    color: var(--accent-neon) !important;
+    text-shadow: 0 0 8px var(--accent-neon);
+}
+
+/* Foto de perfil */
+.resume-profile-image {
+    border: 3px solid var(--accent-cyan);
+    box-shadow: 0 0 20px var(--accent-cyan);
+    transition: all 0.3s ease;
+}
+
+.resume-profile-image:hover {
+    box-shadow: 0 0 30px var(--accent-cyan), 0 0 40px var(--accent-purple);
+    transform: scale(1.05);
+}
+
+/* Seções */
+.resume-section-heading {
+    color: var(--accent-cyan) !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-cyan);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem !important;
+    position: relative;
+}
+
+.resume-section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--accent-neon);
+    box-shadow: 0 0 10px var(--accent-neon);
+}
+
+/* Items de experiência */
+.item {
+    border-left: 2px solid var(--border-color);
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    border-left-color: var(--accent-cyan);
+    box-shadow: -5px 0 15px rgba(0, 255, 255, 0.1);
+}
+
+.item-title {
+    color: var(--accent-neon) !important;
+    font-weight: 600;
+}
+
+.item-meta {
+    color: var(--text-muted) !important;
+    font-style: italic;
+}
+
+/* Listas */
+.resume-list li::before,
+.resume-skills-list li::before {
+    content: '▹';
+    color: var(--accent-cyan);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Barra lateral */
+.resume-aside {
+    background: rgba(26, 26, 26, 0.5);
+    border-left: 1px solid var(--border-color);
+}
+
+/* Badges e Skills */
+.badge, .resume-skill-name {
+    background: var(--bg-medium) !important;
+    color: var(--accent-cyan) !important;
+    border: 1px solid var(--accent-cyan);
+    padding: 0.4rem 0.8rem;
+    margin: 0.2rem;
+    border-radius: 3px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background: var(--accent-cyan) !important;
+    color: var(--bg-dark) !important;
+    box-shadow: 0 0 15px var(--accent-cyan);
+}
+
+/* Progresso de habilidades (se houver) */
+.progress {
+    background: var(--bg-dark) !important;
+    border: 1px solid var(--border-color);
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple)) !important;
+    box-shadow: 0 0 10px var(--accent-cyan);
+}
+
+/* Footer */
+.resume-footer {
+    background: var(--bg-medium);
+    margin: 0 -2.5rem -2.5rem -2.5rem;
+    padding: 1.5rem;
+    border-top: 2px solid var(--accent-cyan);
+}
+
+.footer {
+    background: transparent;
+    color: var(--text-muted);
+}
+
+/* Ícones sociais */
+.resume-social-list a {
+    transition: all 0.3s ease;
+}
+
+.resume-social-list a:hover {
+    transform: translateY(-3px);
+}
+
+.resume-social-list i {
+    color: var(--accent-cyan) !important;
+    transition: all 0.3s ease;
+}
+
+.resume-social-list a:hover i {
+    color: var(--accent-neon) !important;
+    filter: drop-shadow(0 0 10px var(--accent-neon));
+}
+
+/* HR - linhas separadoras */
+hr {
+    border-color: var(--border-color) !important;
+    opacity: 0.3;
+}
+
+/* Educação */
+.resume-degree,
+.resume-degree-org {
+    color: var(--text-primary) !important;
+}
+
+.resume-degree {
+    font-weight: 600;
+    color: var(--text-primary) !important;
+}
+
+.resume-degree-time,
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Animação de entrada */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.15), 0 0 60px rgba(0, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 255, 255, 0.25), 0 0 80px rgba(0, 255, 255, 0.15);
+    }
+}
+
+.resume-wrapper {
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Efeito de scanline cyberpunk (sutil) */
+.resume-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 255, 0.03) 0px,
+        rgba(0, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.resume-wrapper > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Texto em negrito */
+strong, .font-weight-bold {
+    color: var(--accent-neon) !important;
+}
+
+/* Ajustes de contraste */
+p, li, .item-content {
+    color: var(--text-secondary) !important;
+    line-height: 1.6;
+}
+
+/* Ícones */
+i.fas, i.fab, i.far {
+    color: var(--accent-cyan);
+}
+
+/* Hover nos items de lista */
+.resume-education-list li:hover,
+.resume-lang-list li:hover,
+.resume-interests-list li:hover {
+    color: var(--accent-cyan) !important;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+/* Copyright */
+.copyright {
+    color: var(--text-muted) !important;
+}
+
+.copyright a {
+    color: var(--accent-cyan) !important;
+}
+
+/* Responsividade - mantém o tema em mobile */
+@media (max-width: 768px) {
+    .resume-header {
+        margin: -1.5rem -1.5rem 0 -1.5rem;
+    }
+
+    .resume-footer {
+        margin: 0 -1.5rem -1.5rem -1.5rem;
+    }
+}
