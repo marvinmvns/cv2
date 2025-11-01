@@ -186,19 +186,9 @@ img.picture:hover {
   color: var(--brand-muted);
 }
 
-// Subtle fade+lift entrance for sections (pairs with JS .visible class)
+// Subtle transitions for sections (always visible, no JS required)
 .resume-section, .resume-timeline-item, .resume-skill-item, .summary-highlights .highlight-item, .badge {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity .5s ease, transform .5s ease;
-}
-
-// When elements become visible via IntersectionObserver or static markup
-.resume-section.visible,
-.resume-timeline-item.visible,
-.resume-skill-item.visible,
-.summary-highlights .highlight-item.visible,
-.badge.visible {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity .3s ease, transform .3s ease;
 }
