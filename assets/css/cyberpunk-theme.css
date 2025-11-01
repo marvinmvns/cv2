@@ -248,6 +248,21 @@ hr {
     color: var(--text-muted) !important;
 }
 
+/* Logos das instituições */
+.institution-logo {
+    height: 24px;
+    width: auto;
+    max-width: 80px;
+    object-fit: contain;
+    filter: brightness(0.9) contrast(1.1);
+    transition: all 0.3s ease;
+}
+
+.institution-logo:hover {
+    filter: brightness(1.1) contrast(1.2);
+    transform: scale(1.05);
+}
+
 /* Animações de cintilação neon */
 @keyframes neonFlicker {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
