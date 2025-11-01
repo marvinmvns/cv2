@@ -28,6 +28,13 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+# Disable caching
+sass:
+  cache: false
+
+# Disable GitHub Pages cache
+github: [metadata]
+
 # A list of the pages to display in the navigation bar
 header_pages:
 
