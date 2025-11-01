@@ -445,7 +445,7 @@ i.fas, i.fab, i.far {
     margin-bottom: 2rem;
 }
 
-.project-button {
+.projects-buttons-container button {
     display: inline-flex;
     align-items: center;
     padding: 12px 24px;
@@ -464,7 +464,7 @@ i.fas, i.fab, i.far {
     overflow: hidden;
 }
 
-.project-button::before {
+.projects-buttons-container button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -475,11 +475,11 @@ i.fas, i.fab, i.far {
     transition: left 0.5s ease;
 }
 
-.project-button:hover::before {
+.projects-buttons-container button:hover::before {
     left: 100%;
 }
 
-.project-button:hover {
+.projects-buttons-container button:hover {
     background: var(--accent-cyan) !important;
     color: var(--bg-dark) !important;
     border-color: var(--accent-neon);
@@ -490,7 +490,7 @@ i.fas, i.fab, i.far {
         0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.project-button i {
+.projects-buttons-container button i {
     color: inherit !important;
     animation: none !important;
     font-size: 16px;
@@ -518,7 +518,7 @@ i.fas, i.fab, i.far {
         flex-direction: column;
     }
 
-    .project-button {
+    .projects-buttons-container button {
         width: 100%;
         justify-content: center;
     }
