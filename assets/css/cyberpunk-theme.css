@@ -138,6 +138,27 @@ a:hover, .resume-link:hover {
     margin-left: -1em;
 }
 
+/* Listas ordenadas */
+ol.resume-list {
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 2em;
+}
+
+ol.resume-list li {
+    counter-increment: item;
+    margin-bottom: 0.5rem;
+}
+
+ol.resume-list li::before {
+    content: counter(item) ". ";
+    color: var(--accent-neon);
+    font-weight: bold;
+    margin-right: 0.5em;
+    width: auto;
+    margin-left: 0;
+}
+
 /* Barra lateral */
 .resume-aside {
     background: rgba(26, 26, 26, 0.5);
