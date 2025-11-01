@@ -263,6 +263,26 @@ hr {
     transform: scale(1.05);
 }
 
+/* Logos das empresas nas experiências */
+.company-logo {
+    height: 50px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    border-radius: 6px;
+    padding: 4px;
+    background: rgba(26, 26, 26, 0.5);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.company-logo:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 15px rgba(77, 184, 196, 0.3);
+    transform: scale(1.05);
+}
+
 /* Animações de cintilação neon */
 @keyframes neonFlicker {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
