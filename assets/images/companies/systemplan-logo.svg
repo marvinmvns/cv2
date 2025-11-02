@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <!-- Systemplan Corporate Background -->
+  <rect width="200" height="60" fill="#2C3E50"/>
+
+  <!-- Systemplan text -->
+  <text x="100" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">SYSTEMPLAN</text>
+  <text x="100" y="52" font-family="Arial, sans-serif" font-size="10" font-weight="normal" fill="white" text-anchor="middle" opacity="0.8">Consultoria</text>
+</svg>

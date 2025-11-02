@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <!-- IBM Blue Background -->
+  <rect width="200" height="60" fill="#0530AD"/>
+
+  <!-- IBM striped logo style -->
+  <g fill="white">
+    <!-- I -->
+    <rect x="35" y="15" width="15" height="5"/>
+    <rect x="35" y="22" width="15" height="5"/>
+    <rect x="35" y="29" width="15" height="5"/>
+    <rect x="35" y="36" width="15" height="5"/>
+    <rect x="35" y="43" width="15" height="5"/>
+
+    <!-- B -->
+    <rect x="60" y="15" width="2" height="33"/>
+    <rect x="60" y="15" width="20" height="5"/>
+    <rect x="78" y="15" width="2" height="13"/>
+    <rect x="60" y="26" width="20" height="5"/>
+    <rect x="78" y="31" width="2" height="12"/>
+    <rect x="60" y="43" width="20" height="5"/>
+
+    <!-- M -->
+    <rect x="90" y="15" width="2" height="33"/>
+    <polygon points="92,15 100,25 108,15 110,15 110,20 102,30 110,40 110,48 108,48 100,38 92,48 90,48 90,40 98,30 90,20"/>
+    <rect x="118" y="15" width="2" height="33"/>
+  </g>
+
+  <text x="145" y="40" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">IBM</text>
+</svg>
