@@ -31,6 +31,8 @@
 		<link rel="stylesheet" href="assets/css/cyberpunk-theme.css?v=1.1.0">
 		<!-- Site overrides compiled from assets/css/main.scss by Jekyll -->
 		<link rel="stylesheet" href="assets/css/main.css?v=1.1.0">
+		<!-- Language Selector CSS -->
+		<link rel="stylesheet" href="assets/css/language-selector.css?v=1.1.0">
 
 		<!-- Address bar / theme color for dark surfaces -->
 		<meta name="theme-color" content="#0a0a0a">
@@ -43,17 +45,30 @@
 		<div class="container px-3 px-lg-5">
 			<article class="resume-wrapper mx-auto theme-bg-light p-5 mb-5 my-5 shadow-lg">
 
+				<!-- Language Selector -->
+				<div class="language-selector text-end mb-3">
+					<button class="lang-btn" data-lang="pt" title="Português">
+						<img src="https://flagcdn.com/w40/br.png" alt="Português" width="24" height="16">
+					</button>
+					<button class="lang-btn" data-lang="en" title="English">
+						<img src="https://flagcdn.com/w40/us.png" alt="English" width="24" height="16">
+					</button>
+					<button class="lang-btn" data-lang="es" title="Español">
+						<img src="https://flagcdn.com/w40/es.png" alt="Español" width="24" height="16">
+					</button>
+				</div>
+
 				<div class="resume-header">
 					<div class="row align-items-center">
 						<div class="resume-title col-12 col-md-6 col-lg-8 col-xl-9">
-							<h2 class="resume-name mb-0 text-uppercase">Marcus Segundo</h2>
-							<div class="resume-tagline mb-3 mb-md-0">Tech Lead & Especialista em Open Finance/Insurance | Embedded Systems, Node.js & Java | Azure & AWS</div>
+							<h2 class="resume-name mb-0 text-uppercase" data-i18n="name">Marcus Segundo</h2>
+							<div class="resume-tagline mb-3 mb-md-0" data-i18n="tagline">Tech Lead & Especialista em Open Finance/Insurance | Embedded Systems, Node.js & Java | Azure & AWS</div>
 						</div><!--//resume-title-->
 						<div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-3">
 							<ul class="list-unstyled mb-0">
 								<li class="mb-2"><i class="fas fa-envelope-square fa-fw fa-lg me-2"></i><a class="resume-link" href="mailto:marcus@segundo.me">marcus@segundo.me</a></li>
 									<li class="mb-2"><i class="fas fa-globe fa-fw fa-lg me-2"></i><a class="resume-link" href="https://marvinmvns.github.io/" target="_blank" rel="noopener noreferrer">marvinmvns.github.io</a></li>
-								<li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg me-2"></i>São Paulo, Brasil</li>
+								<li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg me-2"></i><span data-i18n="location">São Paulo, Brasil</span></li>
 							</ul>
 						</div><!--//resume-contact-->
 					</div><!--//row-->
@@ -67,7 +82,7 @@
 						</div>
 
 						<div class="col text-start">
-							<p class="mb-0">Com mais de 20 anos de experiência em TI, incluindo 9 anos liderando equipes multidisciplinares de até 30 pessoas, sou referência técnica e de gestão, movido por desafios que gerem impacto real. Nos últimos 15 anos, empreendi no setor de rastreamento veicular, atendendo quase 10.000 clientes, e desenvolvi chatbots de IA para empresas globais como a Time Warner. No mercado financeiro, atuei em Canais Digitais, Conta Corrente, Empréstimos e Pagamentos. Sou especialista em cloud (AWS/IBM Cloud), metodologias ágeis, Open Finance & Open Insurance, Data Lake, Java, Python e Node.js em microserviços com Spring Boot, DevOps, automação de testes, IoT e modelos de IA/LLM.</p>
+							<p class="mb-0" data-i18n="profileSummary">Com mais de 20 anos de experiência em TI, incluindo 9 anos liderando equipes multidisciplinares de até 30 pessoas, sou referência técnica e de gestão, movido por desafios que gerem impacto real. Nos últimos 15 anos, empreendi no setor de rastreamento veicular, atendendo quase 10.000 clientes, e desenvolvi chatbots de IA para empresas globais como a Time Warner. No mercado financeiro, atuei em Canais Digitais, Conta Corrente, Empréstimos e Pagamentos. Sou especialista em cloud (AWS/IBM Cloud), metodologias ágeis, Open Finance & Open Insurance, Data Lake, Java, Python e Node.js em microserviços com Spring Boot, DevOps, automação de testes, IoT e modelos de IA/LLM.</p>
 						</div><!--//col-->
 					</div>
 				</div><!--//resume-intro-->
@@ -76,7 +91,7 @@
 					<div class="row">
 						<div class="resume-main col-12 col-lg-8 col-xl-9 pe-0 pe-lg-5">
 							<section class="work-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Experiência Profissional</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="workExperience">Experiência Profissional</h3>
 
 								<!-- F1RST Digital Services: 2021 - Presente -->
 								<div class="item mb-3">
@@ -222,7 +237,7 @@
 							</section><!--//work-section-->
 
 								<section class="projects-section py-3" aria-label="Projetos">
-								<h3 class="text-uppercase resume-section-heading mb-4">Projetos</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="projects">Projetos</h3>
 
 									<div class="item mb-3 project-card">
 										<div class="item-heading row align-items-center mb-2">
@@ -367,7 +382,7 @@
 							</section><!--//projects-section-->
 
 							<section class="hobbies-section py-3" aria-label="Hobbies">
-								<h3 class="text-uppercase resume-section-heading mb-4">Hobbies</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="hobbies">Hobbies</h3>
 
 								<div class="item mb-3">
 									<div class="hobby-item d-flex align-items-start mb-3">
@@ -424,7 +439,7 @@
 						</div><!--//resume-main-->
 						<aside class="resume-aside col-12 col-lg-4 col-xl-3 px-lg-4 pb-lg-4">
 							<section class="skills-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Habilidades</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="skills">Habilidades</h3>
 								<div class="item">
 									<h4 class="item-title">Cloud & Infrastructure</h4>
 									<ul class="list-unstyled resume-skills-list">
@@ -459,7 +474,7 @@
 							</section><!--//skills-section-->
 
 							<section class="education-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Formação</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="education">Formação</h3>
 								<ul class="list-unstyled resume-education-list">
 									<li class="mb-3">
 										<div class="d-flex align-items-center mb-2">
@@ -497,7 +512,7 @@
 							</section><!--//education-section-->
 
 							<section class="education-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Certificações</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="certifications">Certificações</h3>
 								<ul class="list-unstyled resume-awards-list">
 									<li class="mb-3">
 										<div class="font-weight-bold"><i class="fab fa-aws text-warning me-2"></i>AWS Certified Cloud Practitioner</div>
@@ -507,7 +522,7 @@
 							</section><!--//education-section-->
 
 							<section class="skills-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Idiomas</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="languages">Idiomas</h3>
 								<ul class="list-unstyled resume-lang-list">
 									<li class="mb-2">Português <span class="text-muted">(Nativo)</span></li>
 									<li>Inglês <span class="text-muted">(Avançado)</span></li>
@@ -515,7 +530,7 @@
 							</section><!--//languages-section-->
 
 							<section class="skills-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Áreas de Interesse</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4" data-i18n="interests">Áreas de Interesse</h3>
 								<ul class="list-unstyled resume-interests-list mb-0">
 									<li class="mb-2">Inteligência Artificial</li>
 									<li class="mb-2">Open Finance</li>
@@ -543,6 +558,8 @@
             <footer class="footer text-center py-4"></footer>
 
             <script defer src="assets/js/projects.js?v=1.1.0"></script>
+            <script src="assets/js/translations.js?v=1.1.0"></script>
+            <script src="assets/js/i18n.js?v=1.1.0"></script>
 
 	</div><!--//main-wrapper-->
 
