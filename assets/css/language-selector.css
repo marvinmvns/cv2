@@ -1,12 +1,18 @@
-/* Language Selector Styles */
-.language-selector {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
+/* Language & Theme Selector Styles */
+.selectors-container {
+  gap: 1rem;
   padding: 8px 0;
 }
 
-.lang-btn {
+.language-selector {
+  gap: 8px;
+}
+
+.theme-selector {
+  gap: 8px;
+}
+
+.lang-btn, .theme-btn {
   background: transparent;
   border: 2px solid rgba(0, 255, 255, 0.3);
   border-radius: 6px;
@@ -17,16 +23,18 @@
   align-items: center;
   justify-content: center;
   opacity: 0.6;
+  min-width: 40px;
+  height: 36px;
 }
 
-.lang-btn:hover {
+.lang-btn:hover, .theme-btn:hover {
   border-color: rgba(0, 255, 255, 0.7);
   opacity: 1;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
 }
 
-.lang-btn.active {
+.lang-btn.active, .theme-btn.active {
   border-color: #00ffff;
   opacity: 1;
   box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
@@ -37,9 +45,55 @@
   border-radius: 2px;
 }
 
+.theme-btn i {
+  font-size: 16px;
+  color: #4db8c4;
+}
+
+.theme-btn.active i {
+  color: #00ffff;
+}
+
+/* Theme specific button colors */
+[data-theme="cyberpunk"] .theme-btn[data-theme="cyberpunk"],
+body.theme-cyberpunk .theme-btn[data-theme="cyberpunk"] {
+  border-color: #4db8c4;
+  background: rgba(77, 184, 196, 0.1);
+}
+
+[data-theme="classic"] .theme-btn[data-theme="classic"],
+body.theme-classic .theme-btn[data-theme="classic"] {
+  border-color: #3498db;
+  background: rgba(52, 152, 219, 0.1);
+}
+
+[data-theme="modern"] .theme-btn[data-theme="modern"],
+body.theme-modern .theme-btn[data-theme="modern"] {
+  border-color: #4caf50;
+  background: rgba(76, 175, 80, 0.1);
+}
+
+[data-theme="warm"] .theme-btn[data-theme="warm"],
+body.theme-warm .theme-btn[data-theme="warm"] {
+  border-color: #ff6b35;
+  background: rgba(255, 107, 53, 0.1);
+}
+
 /* Responsive adjustments */
-@media (max-width: 576px) {
-  .language-selector {
+@media (max-width: 768px) {
+  .selectors-container {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .language-selector, .theme-selector {
     justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .language-selector, .theme-selector {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }

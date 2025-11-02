@@ -1,0 +1,416 @@
+/* Classic Professional Theme - Blue & White */
+
+:root {
+    --bg-dark: #f5f7fa;
+    --bg-darker: #e8ecf1;
+    --bg-light: #ffffff;
+    --bg-medium: #f8f9fa;
+    --text-primary: #2c3e50;
+    --text-secondary: #34495e;
+    --text-muted: #7f8c8d;
+    --accent-primary: #2c3e50;
+    --accent-secondary: #3498db;
+    --accent-tertiary: #2980b9;
+    --border-color: #dce0e5;
+    --shadow: rgba(52, 152, 219, 0.1);
+}
+
+/* Background principal */
+body {
+    background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
+    color: var(--text-primary);
+}
+
+.main-wrapper {
+    background: transparent;
+}
+
+/* Card principal do currículo */
+.resume-wrapper {
+    background: var(--bg-light) !important;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 40px var(--shadow);
+}
+
+.theme-bg-light {
+    background: var(--bg-light) !important;
+}
+
+/* Cabeçalho */
+.resume-header {
+    background: var(--accent-primary);
+    padding: 2rem;
+    margin: -2.5rem -2.5rem 0 -2.5rem;
+    border-bottom: 3px solid var(--accent-secondary);
+}
+
+.resume-name {
+    color: #ffffff !important;
+    font-weight: 900;
+}
+
+.resume-tagline {
+    color: #ecf0f1 !important;
+}
+
+/* Links */
+a, .resume-link {
+    color: var(--accent-secondary) !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover, .resume-link:hover {
+    color: var(--accent-tertiary) !important;
+    text-decoration: underline;
+}
+
+/* Foto de perfil */
+.resume-profile-image {
+    border: 3px solid var(--accent-secondary);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease;
+}
+
+.resume-profile-image:hover {
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    transform: scale(1.05);
+}
+
+/* Seções */
+.resume-section-heading {
+    color: var(--accent-primary) !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-bottom: 3px solid var(--accent-secondary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem !important;
+    position: relative;
+}
+
+.resume-section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: var(--accent-tertiary);
+}
+
+/* Items de experiência */
+.item {
+    border-left: 3px solid var(--border-color);
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    border-left-color: var(--accent-secondary);
+}
+
+.item-title {
+    color: var(--accent-primary) !important;
+    font-weight: 700;
+}
+
+.item-meta {
+    color: var(--text-muted) !important;
+    font-style: italic;
+}
+
+/* Listas */
+.resume-list li::before,
+.resume-skills-list li::before {
+    content: '▸';
+    color: var(--accent-secondary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Listas ordenadas */
+ol.resume-list {
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 2em;
+}
+
+ol.resume-list li {
+    counter-increment: item;
+    margin-bottom: 0.5rem;
+}
+
+ol.resume-list li::before {
+    content: counter(item) ". ";
+    color: var(--accent-secondary);
+    font-weight: bold;
+    margin-right: 0.5em;
+    width: auto;
+    margin-left: 0;
+}
+
+/* Barra lateral */
+.resume-aside {
+    background: var(--bg-medium);
+    border-left: 1px solid var(--border-color);
+}
+
+/* Badges e Skills */
+.badge, .resume-skill-name {
+    background: var(--bg-medium) !important;
+    color: var(--accent-primary) !important;
+    border: 1px solid var(--border-color);
+    padding: 0.4rem 0.8rem;
+    margin: 0.2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background: var(--accent-secondary) !important;
+    color: #ffffff !important;
+    border-color: var(--accent-secondary);
+}
+
+/* Footer */
+.resume-footer {
+    background: var(--bg-medium);
+    margin: 0 -2.5rem -2.5rem -2.5rem;
+    padding: 1.5rem;
+    border-top: 3px solid var(--accent-secondary);
+}
+
+.footer {
+    background: transparent;
+    color: var(--text-muted);
+}
+
+/* Ícones sociais */
+.resume-social-list a {
+    transition: all 0.3s ease;
+}
+
+.resume-social-list a:hover {
+    transform: translateY(-3px);
+}
+
+.resume-social-list i {
+    color: var(--accent-secondary) !important;
+    transition: all 0.3s ease;
+}
+
+.resume-social-list a:hover i {
+    color: var(--accent-tertiary) !important;
+}
+
+/* HR - linhas separadoras */
+hr {
+    border-color: var(--border-color) !important;
+    opacity: 0.5;
+}
+
+/* Educação */
+.resume-degree,
+.resume-degree-org {
+    color: var(--text-primary) !important;
+}
+
+.resume-degree {
+    font-weight: 600;
+}
+
+.resume-degree-time,
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Logos das instituições */
+.institution-logo {
+    height: 24px;
+    width: auto;
+    max-width: 80px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.institution-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Logos das empresas */
+.company-logo {
+    height: 50px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    border-radius: 6px;
+    padding: 4px;
+    background: var(--bg-medium);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-logo:hover {
+    border-color: var(--accent-secondary);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+    transform: scale(1.05);
+}
+
+/* Botão WhatsApp */
+.whatsapp-float {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    width: 60px !important;
+    height: 60px !important;
+    background: #25d366 !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 32px !important;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4) !important;
+    z-index: 9999 !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5) !important;
+    background: #128c7e !important;
+}
+
+.whatsapp-float i {
+    color: #ffffff !important;
+    font-size: 32px !important;
+}
+
+/* Projetos */
+.item-title button {
+    background: none;
+    border: none;
+    color: var(--accent-primary) !important;
+    font-weight: 700;
+    font-size: inherit;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.item-title button:hover {
+    color: var(--accent-secondary) !important;
+}
+
+.project-caret {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.item-title button[aria-expanded="true"] .project-caret {
+    transform: rotate(180deg);
+}
+
+.project-details {
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Hobbies */
+.hobbies-section {
+    margin-top: 2rem;
+}
+
+.hobby-item {
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: 8px;
+    background: var(--bg-medium);
+    border-left: 3px solid var(--border-color);
+}
+
+.hobby-item:hover {
+    background: #f0f3f6;
+    border-left-color: var(--accent-secondary);
+    transform: translateX(5px);
+}
+
+.hobby-item i {
+    color: var(--accent-secondary) !important;
+    min-width: 40px;
+}
+
+.hobby-item .item-title {
+    color: var(--accent-primary) !important;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.hobby-item p {
+    color: var(--text-secondary) !important;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.text-cyan {
+    color: var(--accent-secondary) !important;
+}
+
+/* Texto em negrito */
+strong, .font-weight-bold {
+    color: var(--accent-primary) !important;
+    font-weight: 700;
+}
+
+/* Ajustes de contraste */
+p, li, .item-content {
+    color: var(--text-secondary) !important;
+    line-height: 1.6;
+}
+
+/* Ícones */
+i.fas, i.fab, i.far {
+    color: var(--accent-secondary);
+}
+
+/* Hover nos items de lista */
+.resume-education-list li:hover,
+.resume-lang-list li:hover,
+.resume-interests-list li:hover {
+    color: var(--accent-secondary) !important;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .resume-header {
+        margin: -1.5rem -1.5rem 0 -1.5rem;
+    }
+
+    .resume-footer {
+        margin: 0 -1.5rem -1.5rem -1.5rem;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+}
