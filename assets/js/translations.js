@@ -162,6 +162,8 @@ const translations = {
     projectSvdmpraLink2: "Demonstração em vídeo",
 
     // Hobbies
+    hobby0Title: "Impressão 3D e Fabricação Digital",
+    hobby0Desc: "Mais de 10 anos de experiência sólida em impressão 3D FDM (Fused Deposition Modeling). Domínio completo do fluxo de trabalho desde modelagem até impressão final, incluindo slicing (Cura, PrusaSlicer), calibração de impressoras (bed leveling, e-steps, flow rate), troubleshooting de problemas comuns (warping, stringing, layer adhesion), e otimização de parâmetros de impressão. Experiência com diversos materiais (PLA, ABS, PETG, TPU) e técnicas avançadas como suportes customizados, impressão multi-material e pós-processamento. Já imprimi projetos funcionais como o robô Marvin, peças de reposição, protótipos e objetos customizados.",
     hobby1Title: "Leitura e Aprendizado Contínuo",
     hobby1Desc: "Apaixonado por tecnologia e inovação, estou sempre estudando novas ferramentas, frameworks e tendências do mercado. Leitor ávido de artigos técnicos, documentação e livros sobre arquitetura de software, IA e cloud computing.",
     hobby2Title: "Projetos Maker e IoT",
@@ -372,6 +374,8 @@ const translations = {
     projectSvdmpraLink2: "Video demonstration",
 
     // Hobbies
+    hobby0Title: "3D Printing & Digital Fabrication",
+    hobby0Desc: "Over 10 years of hands-on FDM experience, from modeling and slicing (Cura, PrusaSlicer) to calibration and troubleshooting (bed leveling, e-steps, flow). Comfortable with PLA/ABS/PETG/TPU, multi-material prints, and post-processing. Printed functional parts like the Marvin robot, replacements, prototypes, and custom objects.",
     hobby1Title: "Reading and Continuous Learning",
     hobby1Desc: "Passionate about technology and innovation, I am always studying new tools, frameworks, and market trends. Avid reader of technical articles, documentation, and books on software architecture, AI, and cloud computing.",
     hobby2Title: "Maker Projects and IoT",
@@ -582,6 +586,8 @@ const translations = {
     projectSvdmpraLink2: "Demostración en video",
 
     // Hobbies
+    hobby0Title: "Impresión 3D y Fabricación Digital",
+    hobby0Desc: "Más de 10 años de experiencia práctica en FDM, desde modelado y slicing (Cura, PrusaSlicer) hasta calibración y troubleshooting (bed leveling, e-steps, flow). Experiencia con PLA/ABS/PETG/TPU, impresiones multimaterial y posprocesado. Piezas funcionales impresas como el robot Marvin, repuestos, prototipos y objetos personalizados.",
     hobby1Title: "Lectura y Aprendizaje Continuo",
     hobby1Desc: "Apasionado por tecnología e innovación, siempre estoy estudiando nuevas herramientas, frameworks y tendencias del mercado. Lector ávido de artículos técnicos, documentación y libros sobre arquitectura de software, IA y cloud computing.",
     hobby2Title: "Proyectos Maker e IoT",

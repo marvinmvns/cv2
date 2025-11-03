@@ -321,25 +321,32 @@
     const t = translations[lang];
     const hobbies = document.querySelectorAll('.hobbies-section .hobby-item');
 
+    // Support up to 6 hobby items. If hobby0 exists, map it to the first card.
     if (hobbies[0]) {
-      hobbies[0].querySelector('.item-title').textContent = t.hobby1Title;
-      hobbies[0].querySelector('p').textContent = t.hobby1Desc;
+      const title = t.hobby0Title || t.hobby1Title;
+      const desc = t.hobby0Desc || t.hobby1Desc;
+      hobbies[0].querySelector('.item-title').textContent = title;
+      hobbies[0].querySelector('p').textContent = desc;
     }
     if (hobbies[1]) {
-      hobbies[1].querySelector('.item-title').textContent = t.hobby2Title;
-      hobbies[1].querySelector('p').textContent = t.hobby2Desc;
+      hobbies[1].querySelector('.item-title').textContent = t.hobby1Title;
+      hobbies[1].querySelector('p').textContent = t.hobby1Desc;
     }
     if (hobbies[2]) {
-      hobbies[2].querySelector('.item-title').textContent = t.hobby3Title;
-      hobbies[2].querySelector('p').textContent = t.hobby3Desc;
+      hobbies[2].querySelector('.item-title').textContent = t.hobby2Title;
+      hobbies[2].querySelector('p').textContent = t.hobby2Desc;
     }
     if (hobbies[3]) {
-      hobbies[3].querySelector('.item-title').textContent = t.hobby4Title;
-      hobbies[3].querySelector('p').textContent = t.hobby4Desc;
+      hobbies[3].querySelector('.item-title').textContent = t.hobby3Title;
+      hobbies[3].querySelector('p').textContent = t.hobby3Desc;
     }
     if (hobbies[4]) {
-      hobbies[4].querySelector('.item-title').textContent = t.hobby5Title;
-      hobbies[4].querySelector('p').textContent = t.hobby5Desc;
+      hobbies[4].querySelector('.item-title').textContent = t.hobby4Title;
+      hobbies[4].querySelector('p').textContent = t.hobby4Desc;
+    }
+    if (hobbies[5]) {
+      hobbies[5].querySelector('.item-title').textContent = t.hobby5Title;
+      hobbies[5].querySelector('p').textContent = t.hobby5Desc;
     }
   }
 

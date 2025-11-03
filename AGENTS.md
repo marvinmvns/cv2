@@ -1,33 +1,35 @@
 # Repository Guidelines
 
+This repository hosts a GitHub Pages site powered by Jekyll. Use the guidance below to keep structure, style, and workflow consistent.
+
 ## Project Structure & Module Organization
 - Root `index.html` defines page sections; keep hero and project cards consistent with existing Liquid tags.
-- `_layouts/` hosts page shells, while reusable snippets live in `_includes/`. Duplicate components here before introducing new markup.
-- Styles reside in `_sass/`; create partials with leading underscores and import them via `main.scss` in `assets/css`.
-- Static assets (images, favicons) belong in `assets/`; prefer descriptive, kebab-case filenames and update references accordingly.
+- Layout shells live in `_layouts/`; reusable snippets in `_includes/`. Duplicate and adapt includes here before introducing new markup.
+- Styles reside in `_sass/` as partials (leading `_`); import them from `assets/css/main.scss`.
+- Static assets (images, favicons) go in `assets/` with descriptive, kebab-case filenames; update references when moving/renaming.
 
 ## Build, Test, and Development Commands
-- `bundle install` installs the GitHub Pages plugin set pinned in `Gemfile`.
-- `bundle exec jekyll serve --livereload` runs the local dev server on `http://127.0.0.1:4000`, rebuilding when content or styles change.
-- `bundle exec jekyll build` produces the optimized `_site/` output matching the GitHub Pages deploy environment.
-- `bundle exec jekyll doctor` highlights common configuration issues before pushing.
+- `bundle install` — install the pinned GitHub Pages/Jekyll plugins from `Gemfile`.
+- `bundle exec jekyll serve --livereload` — start local dev at `http://127.0.0.1:4000` with auto-rebuild.
+- `bundle exec jekyll build` — produce optimized `_site/` matching GitHub Pages output.
+- `bundle exec jekyll doctor` — surface common config issues before pushing.
 
 ## Coding Style & Naming Conventions
-- Use two-space indentation for HTML, Liquid, and SCSS; keep Liquid logic minimal and wrap in `{% comment %}` blocks when context is non-obvious.
-- Favor semantic HTML tags (`section`, `article`) and accessible attributes (`aria-label`, descriptive alt text) for every addition.
-- Name Liquid variables and includes in lowercase kebab-case (e.g., `project-card.html`) and SCSS variables in lower snake case (`$primary-blue`).
-- Run `bundle exec jekyll serve` locally before committing to catch template or Sass compilation errors.
+- Two-space indentation for HTML, Liquid, and SCSS; keep Liquid logic minimal. Wrap non-obvious logic in `{% comment %}...{% endcomment %}`.
+- Favor semantic HTML (`section`, `article`) and accessibility (descriptive `alt`, `aria-label`).
+- Name includes and Liquid variables in lowercase kebab-case (e.g., `project-card.html`).
+- SCSS variables use lower snake case (`$primary-blue`); keep naming consistent across partials.
 
 ## Testing Guidelines
-- No automated test suite exists; rely on `bundle exec jekyll build` to surface Liquid/Sass failures and scan the console for warnings.
-- Manually verify responsive layouts in desktop and mobile breakpoints after each significant visual change.
-- Before merging, validate external links and contact actions (GitHub, WhatsApp, email) in the generated `_site/` output.
+- No automated tests. Rely on `bundle exec jekyll build` to catch Liquid/Sass errors and scan console warnings.
+- Manually verify responsive layouts at desktop and mobile breakpoints after visual changes.
+- In `_site/`, validate external links and contact actions (GitHub, WhatsApp, email) before merging.
 
 ## Commit & Pull Request Guidelines
-- Follow the existing imperative, Portuguese commit style (e.g., `Adicionar seção de Projetos`). Prefix with the main action (`Adicionar`, `Corrigir`, `Atualizar`).
-- Reference related issues in the description and describe visual changes with screenshots or GIFs when styling is touched.
-- Ensure PRs summarize what changed, why it matters, and how to review (commands run, pages affected).
+- Commit messages in Portuguese, imperative mood: `Adicionar`, `Corrigir`, `Atualizar` (e.g., `Adicionar seção de Projetos`).
+- PRs should: describe what changed and why, link related issues, list pages affected, and include screenshots/GIFs for style changes. Note commands run for review (`jekyll build`/`serve`).
 
 ## Content Refresh Checklist
-- Update project details in `_includes/projects.html` and keep metadata (links, tech stack) synchronized with any external repos.
-- Re-run `bundle exec jekyll serve` to preview copy edits, and confirm localized strings remain in Brazilian Portuguese unless a new locale is introduced.
+- Update project data in `_includes/projects.html`; keep links and tech stacks synchronized with external repos.
+- Re-run `bundle exec jekyll serve` to preview copy edits; keep user-facing strings in Brazilian Portuguese unless introducing a new locale.
+
