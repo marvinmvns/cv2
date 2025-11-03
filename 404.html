@@ -1,10 +1,107 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>404 - Página Não Encontrada | Marcus Segundo</title>
 
-<div class="container text-center">
-  <h1>404</h1>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Página não encontrada - Marcus Segundo Tech Lead">
+	<meta name="robots" content="noindex, nofollow">
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+	<!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js?v=1.1.0"></script>
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/devresume.css?v=1.1.0">
+	<link rel="stylesheet" href="assets/css/cyberpunk-theme.css?v=1.1.0">
+
+	<!-- Address bar / theme color -->
+	<meta name="theme-color" content="#0a0a0a">
+
+	<style>
+		.error-container {
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: 2rem;
+		}
+		.error-code {
+			font-size: 120px;
+			font-weight: 900;
+			color: #00ffff;
+			text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+			margin-bottom: 1rem;
+			line-height: 1;
+		}
+		.error-message {
+			font-size: 24px;
+			color: #4db8c4;
+			margin-bottom: 2rem;
+		}
+		.error-description {
+			font-size: 16px;
+			color: #a0a0a0;
+			margin-bottom: 3rem;
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.btn-home {
+			display: inline-block;
+			padding: 12px 30px;
+			background: linear-gradient(135deg, #00ffff 0%, #4db8c4 100%);
+			color: #0a0a0a;
+			text-decoration: none;
+			border-radius: 5px;
+			font-weight: 700;
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+		}
+		.btn-home:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5);
+			color: #0a0a0a;
+		}
+		.robot-icon {
+			font-size: 80px;
+			color: #4db8c4;
+			margin-bottom: 2rem;
+			animation: float 3s ease-in-out infinite;
+		}
+		@keyframes float {
+			0%, 100% { transform: translateY(0px); }
+			50% { transform: translateY(-20px); }
+		}
+	</style>
+</head>
+
+<body>
+	<div class="error-container">
+		<div>
+			<div class="robot-icon">
+				<i class="fas fa-robot"></i>
+			</div>
+			<div class="error-code">404</div>
+			<div class="error-message">Página Não Encontrada</div>
+			<div class="error-description">
+				Oops! A página que você está procurando não existe ou foi movida.
+				Que tal voltar para a página inicial?
+			</div>
+			<a href="/" class="btn-home">
+				<i class="fas fa-home me-2"></i>Voltar para Home
+			</a>
+		</div>
+	</div>
+</body>
+</html>

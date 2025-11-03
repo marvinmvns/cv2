@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Main Page -->
+  <url>
+    <loc>https://marvinmvns.github.io/</loc>
+    <lastmod>2025-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Alternate language versions -->
+    <xhtml:link
+      rel="alternate"
+      hreflang="pt-BR"
+      href="https://marvinmvns.github.io/?lang=pt"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en-US"
+      href="https://marvinmvns.github.io/?lang=en"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="es-ES"
+      href="https://marvinmvns.github.io/?lang=es"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://marvinmvns.github.io/"/>
+  </url>
+
+</urlset>
